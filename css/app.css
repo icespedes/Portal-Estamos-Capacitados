@@ -63,6 +63,12 @@
           color: #1998ff; }
       .headers header ul .register a {
         font-size: 13px; }
+  .headers .navigation {
+    width: 80%;
+    margin: auto; }
+    .headers .navigation nav ul {
+      width: 65%;
+      margin: auto; }
 
 /*
 ==============EJEMPLO SASS==============
