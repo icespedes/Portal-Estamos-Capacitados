@@ -1,3 +1,170 @@
-body {
+/*
+==============IMPORTS==============
+*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
+
+/*
+==============VARIABLES==============
+*/
+
+/*COLORS*/
+$primary_color: #FFFFFF; /*BLANCO*/
+$secondary_color: #CBD436; /*AMARILLO*/
+$tertiary_color: #2EAB59; /*VERDE*/
+$quaternary_color: #007EE5; /*AZUL*/
+$quinary_color: #000000; /*NEGRO*/
+
+/*FONTS*/
+$primary_font: 'Montserrat', sans-serif;
+$secondary_font: 'Allerta', sans-serif;
+
+* {
+  /*border: 1px solid red;*/
+}
+
+/*
+==============HEADER==============
+*/
+.headers {
+  border-bottom: 1px solid $secondary_color;
+  box-shadow: 0px 1px 2px $secondary_color;
+  
+  header {
+    width: 90%;
+    margin: auto;
+
+    .logo {
+      display: inline-block;
+      margin: 20px 20px;
+
+      img {
+        max-width: 350px;
+      }
+    }
+
+    .search_bar {
+      max-width: 550px;
+      display: inline-block;
+      margin: 0 0 50px 20px;
+
+      input[type=text] {
+        &:focus {
+          border: 1px solid $secondary_color;
+        }
+      }
+
+      a {
+        background: $secondary_color;
+        i {
+          color: white;
+        }
+        &:hover {
+          background: lighten($secondary_color, 7%);
+        }
+      }
+    }
+
+    ul {
+      padding-left: 0;
+      display: inline-block;
+      list-style: none;
+      float: right;
+      margin: 20px 20px;
+      
+      li {
+        text-align: center;
+        margin: 20px 20px;
+
+        a {
+          color: $quaternary_color;
+        }
+      }
+
+      .login a {
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:hover{
+          border: 1px solid $quaternary_color;
+          color: lighten($quaternary_color, 10%);
+        }
+      }
+
+      .register a {
+        font-size: 13px;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+/*
+==============EJEMPLO SASS==============
+*/
+.header_search_bar {
+  background: #fff;
+  border: #b7b7b7 solid 1px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ccc;
+  position: relative;
+  font-family: '', sans-serif;
+  max-width: 420px;
+  margin: 30px auto 110px;
+  
+  input[type=text] {
+    border: none;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 14px;
+    width: 80%;
+    padding: .5em;
+    margin: 0;
+    overflow: hidden;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  button[type=submit] {
+    background: linear-gradient(lighten($secondary_color, 10%), lighten($secondary_color, 3%));
+    color: rgba(255, 255, 255, 0);
+    border: 1px solid $secondary_color;
+    width: 10%;
+    min-width: 56px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 0 3px 3px 0;
+    margin: 0;
+    user-select: none;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: 18%;
+      right: 0;
+      bottom: 22%;
+      left: 4%;
+      background: url("http://media.lib.byu.edu/assets/images/searchbar/1.0/search-icon.svg") no-repeat center center;
+      background-size: contain;
+    }
+    
+    &:hover, &:focus {
+      background: linear-gradient(lighten($secondary_color, 15%), lighten($secondary_color, 7%));
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+  }
 
 }

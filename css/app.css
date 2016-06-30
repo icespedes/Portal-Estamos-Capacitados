@@ -1,0 +1,115 @@
+/*
+==============IMPORTS==============
+*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
+/*
+==============VARIABLES==============
+*/
+/*COLORS*/
+/*BLANCO*/
+/*AMARILLO*/
+/*VERDE*/
+/*AZUL*/
+/*NEGRO*/
+/*FONTS*/
+* {
+  /*border: 1px solid red;*/ }
+
+/*
+==============HEADER==============
+*/
+.headers {
+  border-bottom: 1px solid #CBD436;
+  box-shadow: 0px 1px 2px #CBD436; }
+  .headers header {
+    width: 90%;
+    margin: auto; }
+    .headers header .logo {
+      display: inline-block;
+      margin: 20px 20px; }
+      .headers header .logo img {
+        max-width: 350px; }
+    .headers header .search_bar {
+      max-width: 550px;
+      display: inline-block;
+      margin: 0 0 50px 20px; }
+      .headers header .search_bar input[type=text]:focus {
+        border: 1px solid #CBD436; }
+      .headers header .search_bar a {
+        background: #CBD436; }
+        .headers header .search_bar a i {
+          color: white; }
+        .headers header .search_bar a:hover {
+          background: #d3da53; }
+    .headers header ul {
+      padding-left: 0;
+      display: inline-block;
+      list-style: none;
+      float: right;
+      margin: 20px 20px; }
+      .headers header ul li {
+        text-align: center;
+        margin: 20px 20px; }
+        .headers header ul li a {
+          color: #007EE5; }
+      .headers header ul .login a {
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px; }
+        .headers header ul .login a:hover {
+          border: 1px solid #007EE5;
+          color: #1998ff; }
+      .headers header ul .register a {
+        font-size: 13px; }
+
+/*
+==============EJEMPLO SASS==============
+*/
+.header_search_bar {
+  background: #fff;
+  border: #b7b7b7 solid 1px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #ccc;
+  position: relative;
+  font-family: '', sans-serif;
+  max-width: 420px;
+  margin: 30px auto 110px; }
+  .header_search_bar input[type=text] {
+    border: none;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 14px;
+    width: 80%;
+    padding: .5em;
+    margin: 0;
+    overflow: hidden; }
+    .header_search_bar input[type=text]:focus {
+      outline: none; }
+  .header_search_bar button[type=submit] {
+    background: linear-gradient(#d6dd60, #ced743);
+    color: rgba(255, 255, 255, 0);
+    border: 1px solid #CBD436;
+    width: 10%;
+    min-width: 56px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 0 3px 3px 0;
+    margin: 0;
+    user-select: none; }
+    .header_search_bar button[type=submit]:after {
+      content: '';
+      position: absolute;
+      top: 18%;
+      right: 0;
+      bottom: 22%;
+      left: 4%;
+      background: url("http://media.lib.byu.edu/assets/images/searchbar/1.0/search-icon.svg") no-repeat center center;
+      background-size: contain; }
+    .header_search_bar button[type=submit]:hover, .header_search_bar button[type=submit]:focus {
+      background: linear-gradient(#dbe175, #d3da53);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      cursor: pointer; }
