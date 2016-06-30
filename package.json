@@ -1,0 +1,29 @@
+{
+  "name": "EstamosCapacitados",
+  "version": "1.0.0",
+  "description": "Portal de empleos exclusivo para Personas en Situación de Discapacidad",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icespedes/Portal-Estamos-Capacitados.git"
+  },
+  "keywords": [
+    "Estamos",
+    "Capacitados"
+  ],
+  "author": "Ignacio Cespedes",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/icespedes/Portal-Estamos-Capacitados/issues"
+  },
+  "homepage": "https://github.com/icespedes/Portal-Estamos-Capacitados",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
