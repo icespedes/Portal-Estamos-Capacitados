@@ -19,8 +19,42 @@ $quinary_color: #000000; /*NEGRO*/
 $primary_font: 'Montserrat', sans-serif;
 $secondary_font: 'Allerta', sans-serif;
 
-* {
-  /*border: 1px solid red;*/
+/*
+==============MIXINS==============
+*/
+@mixin all-transition($time) {
+  -webkit-transition: all $time ease; /* Safari and Chrome */
+  -moz-transition: all $time ease; /* Firefox */
+  -ms-transition: all $time ease; /* IE 9 */
+  -o-transition: all $time ease; /* Opera */
+  transition: all $time ease;  
+}
+
+@mixin scale-transform($scale) {
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+/*
+==============GENERAL CLASS==============
+*/
+
+.body_height {
+  height: 1000px;
+  font-family: $primary_font;
+}
+
+.layout {
+  min-height: 100%;
+  margin-bottom: -72px;
+}
+
+.welcome_background {
+  background-image: url('../img/welcome_background.png');
+  background-size: cover;
 }
 
 /*
@@ -116,70 +150,75 @@ $secondary_font: 'Allerta', sans-serif;
   }
 }
 
-
-
-
-
-
-
 /*
-==============EJEMPLO SASS==============
+==============CUERPO==============
 */
-.header_search_bar {
-  background: #fff;
-  border: #b7b7b7 solid 1px;
-  border-radius: 3px;
-  box-shadow: 0 0 3px #ccc;
+.welcome {
+  border-bottom: 1px solid black;
+  color: $primary_color;
+  height: 400px;
+}
+/*
+==============FOOTER==============
+*/
+.footer {
+  box-shadow: 0px -2px 5px $quinary_color;
   position: relative;
-  font-family: '', sans-serif;
-  max-width: 420px;
-  margin: 30px auto 110px;
-  
-  input[type=text] {
-    border: none;
-    box-shadow: none;
-    font-weight: 400;
-    font-size: 14px;
-    width: 80%;
-    padding: .5em;
-    margin: 0;
-    overflow: hidden;
-    
-    &:focus {
-      outline: none;
-    }
-  }
-  
-  button[type=submit] {
-    background: linear-gradient(lighten($secondary_color, 10%), lighten($secondary_color, 3%));
-    color: rgba(255, 255, 255, 0);
-    border: 1px solid $secondary_color;
-    width: 10%;
-    min-width: 56px;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    border-radius: 0 3px 3px 0;
-    margin: 0;
-    user-select: none;
-    
-    &:after {
-      content: '';
-      position: absolute;
-      top: 18%;
-      right: 0;
-      bottom: 22%;
-      left: 4%;
-      background: url("http://media.lib.byu.edu/assets/images/searchbar/1.0/search-icon.svg") no-repeat center center;
-      background-size: contain;
-    }
-    
-    &:hover, &:focus {
-      background: linear-gradient(lighten($secondary_color, 15%), lighten($secondary_color, 7%));
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-      cursor: pointer;
+  height: 251px;
+  background: $quinary_color;
+
+  .partners {
+    text-align: center;
+    border-bottom: 1px solid #434343;
+
+    img {
+      width: 100px;
+      margin: 0 20px;
+      @include all-transition(1s);
+
+      &:hover {
+        @include scale-transform(1.25);
+      }
     }
   }
 
+  .contact {
+    padding-top: 20px;
+
+    .footer_menu {
+      display: inline-block;
+      text-align: center;
+
+      li {
+        list-style: none;
+        margin: 10px 0; 
+
+        a {
+          color: $primary_color;
+        }
+      }
+    }
+
+    .social {
+      display: inline-block;
+      float: right;
+      padding-top: 35px;
+
+      li {
+        font-size: 30px;
+        display: inline-block;
+        margin: 0 5px;
+        a {
+          color: $primary_color !important;
+
+          &:hover {
+            color: $secondary_color !important;
+          }
+        }
+      }
+    }
+  }
 }
+
+
+

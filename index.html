@@ -13,52 +13,107 @@
       <!--Titulo e Icon-->
       <title>Estamos Capacitados</title>
       <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+      <!--FACEBOOK SDK-->
     </head>
 
     <body>
-      <!--HEADER-->
-      <section class="headers"> 
-        <header> 
-          <figure class="logo"> <!--logo-->
-            <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
-          </figure>
-          <div class="search_bar"> <!--search_bar-->
-            <div class="input-group margin-bottom-sm">
-              <input class="form-control" type="text" placeholder="Buscar: Digitador, Contador, Traducciones...">
-              <a class="btn input-group-addon" href="#"><i class="fa fa-search" title="Search" aria-hidden="true"></i></a>
+      <div class="body_height">
+        <div class="layout"> <!--layout-->
+          <!--HEADER-->
+          <section class="headers"> 
+            <header> 
+              <figure class="logo"> <!--logo-->
+                <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
+              </figure>
+              <div class="search_bar"> <!--search_bar-->
+                <div class="input-group margin-bottom-sm">
+                  <input class="form-control" type="text" placeholder="Buscar: Digitador, Contador, Traducciones...">
+                  <a class="btn input-group-addon" href="#"><i class="fa fa-search" title="Search" aria-hidden="true"></i></a>
+                </div>
+              </div>
+
+              <ul>
+                <li class="login"><a href="">Iniciar sesión</a></li>
+                <li class="register"><span>o bien, </span><a href="">crea una cuenta</a></li>
+              </ul>
+            </header>
+
+            <div class="navigation"> <!--navigation-->
+              <nav> <!--menu-->
+                <ul class="nav nav-tabs">
+                  <li role="presentation"><a href="#">Quiénes Somos</a></li>
+                  <li role="presentation"><a href="#">Acerca de EC</a></li>
+                  <li role="presentation"><a href="#">Casos de Éxito</a></li>
+                  <li role="presentation"><a href="#">Mis Solicitudes</a></li>
+                  <li role="presentation"><a href="#">Mis Trabajos</a></li>
+                  <li role="presentation"><a href="#">Publicar</a></li>
+                </ul>
+              </nav>
             </div>
-          </div>
-
-          <ul>
-            <li class="login"><a href="">Iniciar sesión</a></li>
-            <li class="register"><span>o bien, </span><a href="">crea una cuenta</a></li>
-          </ul>
-        </header>
-
-        <div class="navigation"> <!--navigation-->
-          <nav> <!--menu-->
-            <ul class="nav nav-tabs">
-              <li role="presentation"><a href="#">Quiénes Somos</a></li>
-              <li role="presentation"><a href="#">Acerca de EC</a></li>
-              <li role="presentation"><a href="#">Casos de Éxito</a></li>
-              <li role="presentation"><a href="#">Mis Solicitudes</a></li>
-              <li role="presentation"><a href="#">Mis Trabajos</a></li>
-              <li role="presentation"><a href="#">Publicar</a></li>
-            </ul>
-          </nav>
+          </section>
+          
+          <!--CUERPO-->
+          <section class="welcome welcome_background">
+            <div class="container"> <!--welcome-->
+             <h1>Bienvenido a Estamos Capacitados</h1>
+             <h3>Aquí encontraras una cartera de oferta de trabajos y servicios digitales con una alta calidad, realizada por personas en situación de discapacidad</h3>
+            </div>
+            <div class="search_bar"> <!--search_bar-->
+              <div class="input-group margin-bottom-sm">
+                <input class="form-control" type="text" placeholder="Buscar: Digitador, Contador, Traducciones...">
+                <a class="btn input-group-addon" href="#"><i class="fa fa-search" title="Search" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-      
-      <!--CUERPO-->
-      <section>
-        
-      </section>
 
-      <!--FOOTER-->
-      <footer>
-        
-      </footer>
+        <!--FOOTER-->
+        <footer class="footer">
+          <section class="container">
+            <div class="partners"> <!--partners-->
+              <img src="img/logo_corfo.png" alt="Logo Corfo"> 
+              <img src="img/logo_mutual.png" alt="Logo Mutual">
+              <img src="img/logo_sofofa.png" alt="Logo Sofofa">
+              <img src="img/logo_angelhack.png" alt="Logo AngelHack">
+            </div>
+            <div class="contact"><!--contact-->
+              <ul class="footer_menu"><!--footer_menu-->
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Estadísticas</a></li>
+                <li><a href="#">Casos de Éxito</a></li>
+              </ul>
+              <ul class="social"><!--social-->
+                <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+           
+            <div id="fb-root"></div>
+            <script>
+              (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.6&appId=1734800606758227";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+            </script>
 
+            <div class="fb-like"
+              data-href="https://www.facebook.com/estamoscapacitados/" 
+              data-layout="standard" 
+              data-action="like" 
+              data-size="small" 
+              data-show-faces="true" 
+              data-share="true">
+            </div>
+
+          </section>
+        </footer>
+      </div>
       <!--Llamadas Scripts-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

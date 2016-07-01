@@ -13,8 +13,23 @@
 /*AZUL*/
 /*NEGRO*/
 /*FONTS*/
-* {
-  /*border: 1px solid red;*/ }
+/*
+==============MIXINS==============
+*/
+/*
+==============GENERAL CLASS==============
+*/
+.body_height {
+  height: 1000px;
+  font-family: "Montserrat", sans-serif; }
+
+.layout {
+  min-height: 100%;
+  margin-bottom: -72px; }
+
+.welcome_background {
+  background-image: url("../img/welcome_background.png");
+  background-size: cover; }
 
 /*
 ==============HEADER==============
@@ -71,51 +86,61 @@
       margin: auto; }
 
 /*
-==============EJEMPLO SASS==============
+==============CUERPO==============
 */
-.header_search_bar {
-  background: #fff;
-  border: #b7b7b7 solid 1px;
-  border-radius: 3px;
-  box-shadow: 0 0 3px #ccc;
+.welcome {
+  border-bottom: 1px solid black;
+  color: #FFFFFF;
+  height: 400px; }
+
+/*
+==============FOOTER==============
+*/
+.footer {
+  box-shadow: 0px -2px 5px #000000;
   position: relative;
-  font-family: '', sans-serif;
-  max-width: 420px;
-  margin: 30px auto 110px; }
-  .header_search_bar input[type=text] {
-    border: none;
-    box-shadow: none;
-    font-weight: 400;
-    font-size: 14px;
-    width: 80%;
-    padding: .5em;
-    margin: 0;
-    overflow: hidden; }
-    .header_search_bar input[type=text]:focus {
-      outline: none; }
-  .header_search_bar button[type=submit] {
-    background: linear-gradient(#d6dd60, #ced743);
-    color: rgba(255, 255, 255, 0);
-    border: 1px solid #CBD436;
-    width: 10%;
-    min-width: 56px;
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    border-radius: 0 3px 3px 0;
-    margin: 0;
-    user-select: none; }
-    .header_search_bar button[type=submit]:after {
-      content: '';
-      position: absolute;
-      top: 18%;
-      right: 0;
-      bottom: 22%;
-      left: 4%;
-      background: url("http://media.lib.byu.edu/assets/images/searchbar/1.0/search-icon.svg") no-repeat center center;
-      background-size: contain; }
-    .header_search_bar button[type=submit]:hover, .header_search_bar button[type=submit]:focus {
-      background: linear-gradient(#dbe175, #d3da53);
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-      cursor: pointer; }
+  height: 251px;
+  background: #000000; }
+  .footer .partners {
+    text-align: center;
+    border-bottom: 1px solid #434343; }
+    .footer .partners img {
+      width: 100px;
+      margin: 0 20px;
+      -webkit-transition: all 1s ease;
+      /* Safari and Chrome */
+      -moz-transition: all 1s ease;
+      /* Firefox */
+      -ms-transition: all 1s ease;
+      /* IE 9 */
+      -o-transition: all 1s ease;
+      /* Opera */
+      transition: all 1s ease; }
+      .footer .partners img:hover {
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        -ms-transform: scale(1.25);
+        -o-transform: scale(1.25);
+        transform: scale(1.25); }
+  .footer .contact {
+    padding-top: 20px; }
+    .footer .contact .footer_menu {
+      display: inline-block;
+      text-align: center; }
+      .footer .contact .footer_menu li {
+        list-style: none;
+        margin: 10px 0; }
+        .footer .contact .footer_menu li a {
+          color: #FFFFFF; }
+    .footer .contact .social {
+      display: inline-block;
+      float: right;
+      padding-top: 35px; }
+      .footer .contact .social li {
+        font-size: 30px;
+        display: inline-block;
+        margin: 0 5px; }
+        .footer .contact .social li a {
+          color: #FFFFFF !important; }
+          .footer .contact .social li a:hover {
+            color: #CBD436 !important; }
