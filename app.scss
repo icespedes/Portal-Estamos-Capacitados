@@ -134,13 +134,12 @@ $secondary_font: 'Allerta', sans-serif;
   }
 
   .navigation {
-    width: 80%;
     margin: auto;
 
     nav {
 
       ul {
-        width: 65%;
+        width: 75%;
         margin: auto;
 
         li {
@@ -157,11 +156,44 @@ $secondary_font: 'Allerta', sans-serif;
   border-bottom: 1px solid black;
   color: $primary_color;
   height: 400px;
+
+
+  /*BARRA BUSQUEDA*/
+  .welcome_search {
+    height: 50px;
+
+    .form_search {
+      margin: auto;
+      width: 55%;
+      height: inherit;
+      background: $quinary_color;
+      opacity: 0.9;
+      border-radius: 4px;
+      padding: 1px;
+
+      input {
+        margin: 2px 0 2px 2px;
+        height: 43px;
+        width: 79%;
+        border: 0; 
+        border-radius: 4px;
+      }
+
+      button {
+        background: $secondary_color;
+        margin: 2px 2px 2px 0;
+        float: right;
+        width: 20%;
+        height: 43px;
+        font-size: 20px;
+      }
+    }
+  }
 }
 /*
 ==============FOOTER==============
 */
-.footer {
+footer {
   box-shadow: 0px -2px 5px $quinary_color;
   position: relative;
   height: 251px;

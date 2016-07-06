@@ -79,10 +79,9 @@
       .headers header ul .register a {
         font-size: 13px; }
   .headers .navigation {
-    width: 80%;
     margin: auto; }
     .headers .navigation nav ul {
-      width: 65%;
+      width: 75%;
       margin: auto; }
 
 /*
@@ -91,20 +90,44 @@
 .welcome {
   border-bottom: 1px solid black;
   color: #FFFFFF;
-  height: 400px; }
+  height: 400px;
+  /*BARRA BUSQUEDA*/ }
+  .welcome .welcome_search {
+    height: 50px; }
+    .welcome .welcome_search .form_search {
+      margin: auto;
+      width: 55%;
+      height: inherit;
+      background: #000000;
+      opacity: 0.9;
+      border-radius: 4px;
+      padding: 1px; }
+      .welcome .welcome_search .form_search input {
+        margin: 2px 0 2px 2px;
+        height: 43px;
+        width: 79%;
+        border: 0;
+        border-radius: 4px; }
+      .welcome .welcome_search .form_search button {
+        background: #CBD436;
+        margin: 2px 2px 2px 0;
+        float: right;
+        width: 20%;
+        height: 43px;
+        font-size: 20px; }
 
 /*
 ==============FOOTER==============
 */
-.footer {
+footer {
   box-shadow: 0px -2px 5px #000000;
   position: relative;
   height: 251px;
   background: #000000; }
-  .footer .partners {
+  footer .partners {
     text-align: center;
     border-bottom: 1px solid #434343; }
-    .footer .partners img {
+    footer .partners img {
       width: 100px;
       margin: 0 20px;
       -webkit-transition: all 1s ease;
@@ -116,31 +139,31 @@
       -o-transition: all 1s ease;
       /* Opera */
       transition: all 1s ease; }
-      .footer .partners img:hover {
+      footer .partners img:hover {
         -webkit-transform: scale(1.25);
         -moz-transform: scale(1.25);
         -ms-transform: scale(1.25);
         -o-transform: scale(1.25);
         transform: scale(1.25); }
-  .footer .contact {
+  footer .contact {
     padding-top: 20px; }
-    .footer .contact .footer_menu {
+    footer .contact .footer_menu {
       display: inline-block;
       text-align: center; }
-      .footer .contact .footer_menu li {
+      footer .contact .footer_menu li {
         list-style: none;
         margin: 10px 0; }
-        .footer .contact .footer_menu li a {
+        footer .contact .footer_menu li a {
           color: #FFFFFF; }
-    .footer .contact .social {
+    footer .contact .social {
       display: inline-block;
       float: right;
       padding-top: 35px; }
-      .footer .contact .social li {
+      footer .contact .social li {
         font-size: 30px;
         display: inline-block;
         margin: 0 5px; }
-        .footer .contact .social li a {
+        footer .contact .social li a {
           color: #FFFFFF !important; }
-          .footer .contact .social li a:hover {
+          footer .contact .social li a:hover {
             color: #CBD436 !important; }

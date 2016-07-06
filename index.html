@@ -39,10 +39,10 @@
               </ul>
             </header>
 
-            <div class="navigation"> <!--navigation-->
+            <div class="navigation container"> <!--navigation-->
               <nav> <!--menu-->
                 <ul class="nav nav-tabs">
-                  <li role="presentation"><a href="#">Quiénes Somos</a></li>
+                  <li role="presentation" class="active"><a href="#">Quiénes Somos</a></li>
                   <li role="presentation"><a href="#">Acerca de EC</a></li>
                   <li role="presentation"><a href="#">Casos de Éxito</a></li>
                   <li role="presentation"><a href="#">Mis Solicitudes</a></li>
@@ -54,22 +54,28 @@
           </section>
           
           <!--CUERPO-->
-          <section class="welcome welcome_background">
-            <div class="container"> <!--welcome-->
-             <h1>Bienvenido a Estamos Capacitados</h1>
-             <h3>Aquí encontraras una cartera de oferta de trabajos y servicios digitales con una alta calidad, realizada por personas en situación de discapacidad</h3>
-            </div>
-            <div class="search_bar"> <!--search_bar-->
-              <div class="input-group margin-bottom-sm">
-                <input class="form-control" type="text" placeholder="Buscar: Digitador, Contador, Traducciones...">
-                <a class="btn input-group-addon" href="#"><i class="fa fa-search" title="Search" aria-hidden="true"></i></a>
+          <section id="main-container">
+            <!--Welcome section-->
+            <section class="welcome welcome_background">
+              <div class="container">
+                <div> <!--welcome-->
+                 <h1>Bienvenido a Estamos Capacitados</h1>
+                 <p>Aquí encontraras una cartera de oferta de trabajos y servicios digitales con una alta calidad, realizada por personas en situación de discapacidad
+                 </p>
+                </div>
+                <div class="welcome_search"> <!--search_bar-->
+                  <form class="form_search">
+                    <input type="text" placeholder="  ¿Qué estás buscando?">
+                    <button class="btn" href="#">Buscar</button>
+                  </form>
+                </div>
               </div>
-            </div>
+            </section>
           </section>
         </div>
 
         <!--FOOTER-->
-        <footer class="footer">
+        <footer>
           <section class="container">
             <div class="partners"> <!--partners-->
               <img src="img/logo_corfo.png" alt="Logo Corfo"> 
