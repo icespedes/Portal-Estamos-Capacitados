@@ -15,29 +15,63 @@
       <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
       <!--FACEBOOK SDK-->
-    </head>
+    </head> 
 
     <body>
       <div class="body_height">
         <div class="layout"> <!--layout-->
           <!--HEADER-->
-          <section class="headers"> 
-            <header> 
-              <figure class="logo"> <!--logo-->
-                <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
-              </figure>
-              <div class="search_bar"> <!--search_bar-->
-                <div class="input-group margin-bottom-sm">
-                  <input class="form-control" type="text" placeholder="Buscar: Digitador, Contador, Traducciones...">
-                  <a class="btn input-group-addon" href="#"><i class="fa fa-search" title="Search" aria-hidden="true"></i></a>
+          <header> 
+          <!--TOP HEADER-->
+            <section class="top_header">
+              <div class="top_margin">
+
+                <div class="top_buttons">
+                  <div class="top_access">
+                    <button><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-wheelchair" aria-hidden="true"></i></button>
+                  </div>
+                  <div class="top_social">
+                    <ul>
+                      <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="publicar">
+                  <button href="#">
+                    Publicar
+                  </button>
                 </div>
               </div>
+            </section>
 
-              <ul>
-                <li class="login"><a href="">Iniciar sesión</a></li>
-                <li class="register"><span>o bien, </span><a href="">crea una cuenta</a></li>
-              </ul>
-            </header>
+            <section class="mid_header">
+              <div class="mid_margin">
+                <figure class="logo"> <!--logo-->
+                  <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
+                </figure>
+
+                <div class="search_bar"> <!--search_bar-->
+                  <form>
+                    <input type="text" placeholder="¿Qué estás buscando?">
+                    <button href="#">
+                      <i class="fa fa-search" title="Search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
+
+                <div class="sesion_options">
+                  <ul>
+                    <li class="login"><a href="">Iniciar sesión</a></li>
+                    <li class="register"><span>o bien, </span><a href="">crea una cuenta</a></li>
+                  </ul>
+                </div>
+              </div> 
+            </section>
 
             <div class="navigation container"> <!--navigation-->
               <nav> <!--menu-->
@@ -47,11 +81,10 @@
                   <li role="presentation"><a href="#">Casos de Éxito</a></li>
                   <li role="presentation"><a href="#">Mis Solicitudes</a></li>
                   <li role="presentation"><a href="#">Mis Trabajos</a></li>
-                  <li role="presentation"><a href="#">Publicar</a></li>
                 </ul>
               </nav>
             </div>
-          </section>
+          </header>
           
           <!--CUERPO-->
           <section id="main-container">
@@ -89,7 +122,7 @@
                 <li><a href="#">Estadísticas</a></li>
                 <li><a href="#">Casos de Éxito</a></li>
               </ul>
-              <ul class="social"><!--social-->
+              <ul class="foot_social"><!--social-->
                 <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
@@ -97,26 +130,6 @@
               </ul>
             </div>
            
-            <div id="fb-root"></div>
-            <script>
-              (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.6&appId=1734800606758227";
-                fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));
-            </script>
-
-            <div class="fb-like"
-              data-href="https://www.facebook.com/estamoscapacitados/" 
-              data-layout="standard" 
-              data-action="like" 
-              data-size="small" 
-              data-show-faces="true" 
-              data-share="true">
-            </div>
-
           </section>
         </footer>
       </div>

@@ -20,8 +20,7 @@
 ==============GENERAL CLASS==============
 */
 .body_height {
-  height: 1000px;
-  font-family: "Montserrat", sans-serif; }
+  height: 1000px; }
 
 .layout {
   min-height: 100%;
@@ -34,53 +33,85 @@
 /*
 ==============HEADER==============
 */
-.headers {
+header {
   border-bottom: 1px solid #CBD436;
   box-shadow: 0px 1px 2px #CBD436; }
-  .headers header {
-    width: 90%;
+  header .top_header {
+    background: #000000;
+    height: 45px; }
+    header .top_header .top_margin {
+      margin: 0 20px; }
+      header .top_header .top_margin .top_buttons {
+        display: inline-block; }
+        header .top_header .top_margin .top_buttons .top_access {
+          display: inline-block; }
+          header .top_header .top_margin .top_buttons .top_access button {
+            border-radius: 20px;
+            width: 33px;
+            height: 33px;
+            background: white; }
+            header .top_header .top_margin .top_buttons .top_access button i {
+              font-size: 20px; }
+        header .top_header .top_margin .top_buttons .top_social {
+          padding-top: 5px;
+          display: inline-block;
+          line-height: 0; }
+          header .top_header .top_margin .top_buttons .top_social ul li {
+            font-size: 28px;
+            display: inline-block; }
+            header .top_header .top_margin .top_buttons .top_social ul li a {
+              color: #FFFFFF !important; }
+              header .top_header .top_margin .top_buttons .top_social ul li a:hover {
+                color: #2EAB59 !important; }
+      header .top_header .top_margin .publicar {
+        display: inline-block;
+        float: right;
+        text-align: right; }
+        header .top_header .top_margin .publicar button {
+          margin-top: 5px;
+          background: #2EAB59;
+          width: 140px;
+          color: #FFFFFF; }
+  header .mid_header .mid_margin {
+    margin: 20px; }
+    header .mid_header .mid_margin .logo {
+      display: inline-block; }
+      header .mid_header .mid_margin .logo img {
+        max-width: 300px; }
+    header .mid_header .mid_margin .search_bar {
+      margin-left: 20px;
+      display: inline-block;
+      position: absolute; }
+      header .mid_header .mid_margin .search_bar form input {
+        width: 450px;
+        padding-left: 15px;
+        height: 35px;
+        border-radius: 4px;
+        border: 1px solid gray; }
+      header .mid_header .mid_margin .search_bar form button {
+        height: 35px; }
+    header .mid_header .mid_margin .sesion_options {
+      float: right; }
+      header .mid_header .mid_margin .sesion_options ul {
+        display: inline-block;
+        list-style: none; }
+        header .mid_header .mid_margin .sesion_options ul li {
+          text-align: center; }
+          header .mid_header .mid_margin .sesion_options ul li a {
+            color: #007EE5; }
+        header .mid_header .mid_margin .sesion_options ul .login a {
+          text-decoration: none;
+          font-size: 15px;
+          padding: 10px;
+          border-radius: 5px; }
+          header .mid_header .mid_margin .sesion_options ul .login a:hover {
+            border: 1px solid #007EE5;
+            color: #1998ff; }
+        header .mid_header .mid_margin .sesion_options ul .register a {
+          font-size: 13px; }
+  header .navigation {
     margin: auto; }
-    .headers header .logo {
-      display: inline-block;
-      margin: 20px 20px; }
-      .headers header .logo img {
-        max-width: 350px; }
-    .headers header .search_bar {
-      max-width: 550px;
-      display: inline-block;
-      margin: 0 0 50px 20px; }
-      .headers header .search_bar input[type=text]:focus {
-        border: 1px solid #CBD436; }
-      .headers header .search_bar a {
-        background: #CBD436; }
-        .headers header .search_bar a i {
-          color: white; }
-        .headers header .search_bar a:hover {
-          background: #d3da53; }
-    .headers header ul {
-      padding-left: 0;
-      display: inline-block;
-      list-style: none;
-      float: right;
-      margin: 20px 20px; }
-      .headers header ul li {
-        text-align: center;
-        margin: 20px 20px; }
-        .headers header ul li a {
-          color: #007EE5; }
-      .headers header ul .login a {
-        text-decoration: none;
-        font-size: 18px;
-        padding: 10px;
-        border-radius: 5px; }
-        .headers header ul .login a:hover {
-          border: 1px solid #007EE5;
-          color: #1998ff; }
-      .headers header ul .register a {
-        font-size: 13px; }
-  .headers .navigation {
-    margin: auto; }
-    .headers .navigation nav ul {
+    header .navigation nav ul {
       width: 75%;
       margin: auto; }
 
@@ -155,15 +186,15 @@ footer {
         margin: 10px 0; }
         footer .contact .footer_menu li a {
           color: #FFFFFF; }
-    footer .contact .social {
+    footer .contact .foot_social {
       display: inline-block;
       float: right;
       padding-top: 35px; }
-      footer .contact .social li {
+      footer .contact .foot_social li {
         font-size: 30px;
         display: inline-block;
         margin: 0 5px; }
-        footer .contact .social li a {
+        footer .contact .foot_social li a {
           color: #FFFFFF !important; }
-          footer .contact .social li a:hover {
+          footer .contact .foot_social li a:hover {
             color: #CBD436 !important; }
