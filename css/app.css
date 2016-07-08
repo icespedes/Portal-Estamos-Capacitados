@@ -1,7 +1,7 @@
 /*
 ==============IMPORTS==============
 */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
 /*
 ==============VARIABLES==============
@@ -17,15 +17,14 @@
 ==============MIXINS==============
 */
 /*
+  <----------TRANSICIONES---------->
+  */
+/*
+  <----------ESCALA CRECIMIENTO ITEMS---------->
+  */
+/*
 ==============GENERAL CLASS==============
 */
-.body_height {
-  height: 1000px; }
-
-.layout {
-  min-height: 100%;
-  margin-bottom: -72px; }
-
 .welcome_background {
   background-image: url("../img/welcome_background.png");
   background-size: cover; }
@@ -35,10 +34,20 @@
 */
 header {
   border-bottom: 1px solid #CBD436;
-  box-shadow: 0px 1px 2px #CBD436; }
+  box-shadow: 0px 1px 2px #CBD436;
+  /*
+  <----------ACCESIBILIDAD-REDES SOCIALES-PUBLICAR---------->
+  */
+  /*
+  <----------LOGO-SEARCH BAR-LOGIN---------->
+  */
+  /*
+  <----------BARRA DE NAVEGACION---------->
+  */ }
   header .top_header {
     background: #000000;
-    height: 45px; }
+    height: 45px;
+    box-shadow: 0px 0px 1px #000000; }
     header .top_header .top_margin {
       margin: 0 20px; }
       header .top_header .top_margin .top_buttons {
@@ -73,7 +82,7 @@ header {
           width: 140px;
           color: #FFFFFF; }
   header .mid_header .mid_margin {
-    margin: 20px; }
+    margin: 20px 20px 0 20px; }
     header .mid_header .mid_margin .logo {
       display: inline-block; }
       header .mid_header .mid_margin .logo img {
@@ -107,22 +116,40 @@ header {
           header .mid_header .mid_margin .sesion_options ul .login a:hover {
             border: 1px solid #007EE5;
             color: #1998ff; }
-        header .mid_header .mid_margin .sesion_options ul .register a {
-          font-size: 13px; }
+        header .mid_header .mid_margin .sesion_options ul .register {
+          margin-top: 20px; }
+          header .mid_header .mid_margin .sesion_options ul .register a {
+            font-size: 13px; }
   header .navigation {
     margin: auto; }
-    header .navigation nav ul {
-      width: 75%;
+    header .navigation nav {
+      width: 60%;
       margin: auto; }
 
 /*
 ==============CUERPO==============
 */
+/*
+  <----------BIENVENIDA---------->
+  */
 .welcome {
   border-bottom: 1px solid black;
   color: #FFFFFF;
   height: 400px;
+  /*TITULO BIENVENIDA*/
   /*BARRA BUSQUEDA*/ }
+  .welcome .welcome_title {
+    text-align: center;
+    font-size: 30px; }
+    .welcome .welcome_title h1 {
+      padding-top: 20px;
+      font-family: "Raleway", sans-serif;
+      color: white; }
+  .welcome figure {
+    text-align: center;
+    margin-bottom: 15px; }
+    .welcome figure img {
+      width: 170px; }
   .welcome .welcome_search {
     height: 50px; }
     .welcome .welcome_search .form_search {
@@ -135,6 +162,8 @@ header {
       padding: 1px; }
       .welcome .welcome_search .form_search input {
         margin: 2px 0 2px 2px;
+        padding-left: 15px;
+        color: black;
         height: 43px;
         width: 79%;
         border: 0;
@@ -146,6 +175,60 @@ header {
         width: 20%;
         height: 43px;
         font-size: 20px; }
+  .welcome h3 {
+    text-align: center;
+    font-size: 18px; }
+
+/*
+  <----------SERVICIOS---------->
+  */
+.services {
+  border-bottom: 1px solid gray; }
+  .services .row {
+    margin: 20px 0; }
+    .services .row .service_item {
+      display: inline-block;
+      text-align: center;
+      font-family: "Raleway", sans-serif; }
+      .services .row .service_item .icon_box {
+        font-size: 70px; }
+
+/*
+  <----------CASOS DE EXITO---------->
+  */
+.case_success .row {
+  margin: 25px 0; }
+  .case_success .row .success_box .success_employee_box {
+    padding: 0px 30px;
+    margin: 20px 0; }
+    .case_success .row .success_box .success_employee_box .success_employee {
+      text-align: center;
+      display: inline-block; }
+      .case_success .row .success_box .success_employee_box .success_employee img {
+        width: 200px;
+        border: 1px solid gray;
+        box-shadow: 2px 2px 4px black;
+        -webkit-transition: all 1s ease;
+        /* Safari and Chrome */
+        -moz-transition: all 1s ease;
+        /* Firefox */
+        -ms-transition: all 1s ease;
+        /* IE 9 */
+        -o-transition: all 1s ease;
+        /* Opera */
+        transition: all 1s ease; }
+        .case_success .row .success_box .success_employee_box .success_employee img:hover {
+          -webkit-transform: scale(1.05);
+          -moz-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+          -o-transform: scale(1.05);
+          transform: scale(1.05); }
+      .case_success .row .success_box .success_employee_box .success_employee .success_employee_name {
+        margin-top: 10px; }
+        .case_success .row .success_box .success_employee_box .success_employee .success_employee_name label {
+          margin: auto; }
+    .case_success .row .success_box .success_employee_box .success_employee_multimedia {
+      display: inline-block; }
 
 /*
 ==============FOOTER==============
@@ -154,7 +237,10 @@ footer {
   box-shadow: 0px -2px 5px #000000;
   position: relative;
   height: 251px;
-  background: #000000; }
+  background: #000000;
+  /*
+  <----------LOGOS PARTNERS---------->
+  */ }
   footer .partners {
     text-align: center;
     border-bottom: 1px solid #434343; }
@@ -177,7 +263,13 @@ footer {
         -o-transform: scale(1.25);
         transform: scale(1.25); }
   footer .contact {
-    padding-top: 20px; }
+    padding-top: 20px;
+    /*
+  <----------MENU NAVEGACION INFERIOR---------->
+  */
+    /*
+  <----------REDES SOCIALES INFERIOR---------->
+  */ }
     footer .contact .footer_menu {
       display: inline-block;
       text-align: center; }

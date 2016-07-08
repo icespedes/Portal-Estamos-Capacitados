@@ -18,121 +18,222 @@
     </head> 
 
     <body>
-      <div class="body_height">
-        <div class="layout"> <!--layout-->
-          <!--HEADER-->
-          <header> 
-          <!--TOP HEADER-->
-            <section class="top_header">
-              <div class="top_margin">
+      <!--HEADER-->
+      <header> 
+      <!--TOP HEADER-->
+        <section class="top_header">
+          <div class="top_margin">
 
-                <div class="top_buttons">
-                  <div class="top_access">
-                    <button><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-wheelchair" aria-hidden="true"></i></button>
-                  </div>
-                  <div class="top_social">
-                    <ul>
-                      <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="publicar">
-                  <button href="#">
-                    Publicar
-                  </button>
-                </div>
+            <div class="top_buttons">
+              <div class="top_access">
+                <button title="Aumentar Fuente"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                <button title="Disminuir Fuente"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+                <button title="Accesibilidad"><i class="fa fa-wheelchair" aria-hidden="true"></i></button>
               </div>
-            </section>
-
-            <section class="mid_header">
-              <div class="mid_margin">
-                <figure class="logo"> <!--logo-->
-                  <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
-                </figure>
-
-                <div class="search_bar"> <!--search_bar-->
-                  <form>
-                    <input type="text" placeholder="¿Qué estás buscando?">
-                    <button href="#">
-                      <i class="fa fa-search" title="Search" aria-hidden="true"></i>
-                    </button>
-                  </form>
-                </div>
-
-                <div class="sesion_options">
-                  <ul>
-                    <li class="login"><a href="">Iniciar sesión</a></li>
-                    <li class="register"><span>o bien, </span><a href="">crea una cuenta</a></li>
-                  </ul>
-                </div>
-              </div> 
-            </section>
-
-            <div class="navigation container"> <!--navigation-->
-              <nav> <!--menu-->
-                <ul class="nav nav-tabs">
-                  <li role="presentation" class="active"><a href="#">Quiénes Somos</a></li>
-                  <li role="presentation"><a href="#">Acerca de EC</a></li>
-                  <li role="presentation"><a href="#">Casos de Éxito</a></li>
-                  <li role="presentation"><a href="#">Mis Solicitudes</a></li>
-                  <li role="presentation"><a href="#">Mis Trabajos</a></li>
+              <div class="top_social">
+                <ul>
+                  <li><a href="#" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                  <li><a href="#" title="Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                  <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
                 </ul>
-              </nav>
+              </div>
             </div>
-          </header>
-          
-          <!--CUERPO-->
-          <section id="main-container">
-            <!--Welcome section-->
-            <section class="welcome welcome_background">
-              <div class="container">
-                <div> <!--welcome-->
-                 <h1>Bienvenido a Estamos Capacitados</h1>
-                 <p>Aquí encontraras una cartera de oferta de trabajos y servicios digitales con una alta calidad, realizada por personas en situación de discapacidad
-                 </p>
-                </div>
-                <div class="welcome_search"> <!--search_bar-->
-                  <form class="form_search">
-                    <input type="text" placeholder="  ¿Qué estás buscando?">
-                    <button class="btn" href="#">Buscar</button>
-                  </form>
+
+            <div class="publicar">
+              <button class="btn" title="Publicar Oferta" href="#">
+                Publicar
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="mid_header">
+          <div class="mid_margin">
+            <figure class="logo" title="Estamos Capacitados"> <!--logo-->
+              <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
+            </figure>
+
+            <div class="search_bar"> <!--search_bar-->
+              <form>
+                <input type="text" title="Buscar" placeholder="¿Qué estás buscando?">
+                <button href="#" title="Buscar" class="btn">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+
+            <div class="sesion_options">
+              <ul>
+                <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión">Iniciar sesión</a></li>
+                <li class="register"><span>o bien, </span><a href="" title="Registrarse">crea una cuenta</a></li>
+              </ul>
+            </div>
+          </div> 
+        </section>
+
+        <div class="navigation container"> <!--navigation-->
+          <nav> <!--menu-->
+            <ul class="nav nav-tabs">
+              <li role="presentation" class="active"><a href="#">Quiénes Somos</a></li>
+              <li role="presentation"><a href="#">Acerca de EC</a></li>
+              <li role="presentation"><a href="#">Casos de Éxito</a></li>
+              <li role="presentation"><a href="#">Mis Solicitudes</a></li>
+              <li role="presentation"><a href="#">Mis Trabajos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+      <!--CUERPO-->
+      <section>
+        <!--BIENVENIDA-->
+        <section class="welcome welcome_background">
+          <div class="container">
+            <div class="welcome_title"> <!--welcome-->
+              <h1>
+                ¿Necesitas un servicio?<br>
+                Encuentra eso y más en <br>
+              </h1>
+            </div>
+
+            <figure class="welcome_logo">
+              <img src="img/LogoEC.png" alt="">
+            </figure>
+
+            <div class="welcome_search"> <!--search_bar-->
+              <form class="form_search">
+                <input type="text" placeholder="Busca: Diseños, Traducciones, Programación">
+                <button class="btn" href="#">Buscar</button>
+              </form>
+            </div>
+            <h3>
+              Trabajos con ❤ realizados por PeSD
+            </h3>
+          </div>
+        </section>
+
+        <!--SERVICIOS-->
+        <section class="services">  
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="service_item">
+                  <div class="icon_box">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                  </div>
+                  <div class="service_text">
+                    <p>Más de 800 trabajos por semana</p>
+                    <a href="#">Ver Más</a>
+                  </div>
                 </div>
               </div>
-            </section>
-          </section>
-        </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="service_item">
+                  <div class="icon_box">
+                    <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                  </div>
+                  <div class="service_text">
+                    <p>Más de 1000 Personas en situación de discapacidad trabajan a traves de Estamos Capacitados</p>
+                    <a href="#">Ver Más</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="service_item">
+                  <div class="icon_box">
+                    <i class="fa fa-building-o" aria-hidden="true"></i>
+                  </div>
+                  <div class="service_text">
+                    <p>Más de 20 instituciones asociadas a Estamos Capacitados</p>
+                    <a href="#">Ver Más</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                 <div class="service_item">
+                  <div class="icon_box">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                  </div>
+                  <div class="service_text">
+                    <p>Más de 100 Tipos de trabajos ofrecidos</p>
+                    <a href="#">Ver Más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <!--FOOTER-->
-        <footer>
-          <section class="container">
-            <div class="partners"> <!--partners-->
-              <img src="img/logo_corfo.png" alt="Logo Corfo"> 
-              <img src="img/logo_mutual.png" alt="Logo Mutual">
-              <img src="img/logo_sofofa.png" alt="Logo Sofofa">
-              <img src="img/logo_angelhack.png" alt="Logo AngelHack">
+        <!--CASOS DE EXITO-->
+        <section class="case_success">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-6">
+                <div class="success_box">
+                  <div class="success_title">
+                    <h3>Casos de Éxito</h3>
+                  </div>
+                  <div class="success_employee_box">
+                    <div>
+                      <h4>Trabajador de la semana</h4>
+                    </div>
+                    <section class="success_employee">
+                      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhtAAAAJGMzOWJlNzZlLTUyNWQtNGZiNi1iMzA5LWFkZTI4NGM4ZjViMg.jpg" alt="">
+                      <div class="success_employee_name">
+                        <label>Ignacio Céspedes C.</label>
+                      </div>
+                    </section>
+                    <section class="success_employee_multimedia">
+                      <div class="success_employee_video">
+                        
+                      </div>
+                      <div class="success_employee_photos">
+                        
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <div class="success_box">
+                  <div class="success_title">
+                    <h3>Otros Casos de Éxito</h3>
+                  </div>
+                  <div class="success_other_employee">
+                    
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="contact"><!--contact-->
-              <ul class="footer_menu"><!--footer_menu-->
-                <li><a href="#">Quiénes Somos</a></li>
-                <li><a href="#">Estadísticas</a></li>
-                <li><a href="#">Casos de Éxito</a></li>
-              </ul>
-              <ul class="foot_social"><!--social-->
-                <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-           
-          </section>
-        </footer>
-      </div>
+          </div>
+        </section>
+      </section>
+
+      <!--FOOTER-->
+      <footer>
+        <section class="container">
+          <div class="partners"> <!--partners-->
+            <img src="img/logo_corfo.png" alt="Logo Corfo"> 
+            <img src="img/logo_mutual.png" alt="Logo Mutual">
+            <img src="img/logo_sofofa.png" alt="Logo Sofofa">
+            <img src="img/logo_angelhack.png" alt="Logo AngelHack">
+          </div>
+          <div class="contact"><!--contact-->
+            <ul class="footer_menu"><!--footer_menu-->
+              <li><a href="#">Quiénes Somos</a></li>
+              <li><a href="#">Estadísticas</a></li>
+              <li><a href="#">Casos de Éxito</a></li>
+            </ul>
+            <ul class="foot_social"><!--social-->
+              <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+         
+        </section>
+      </footer>
       <!--Llamadas Scripts-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
