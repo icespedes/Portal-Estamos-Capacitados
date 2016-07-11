@@ -64,10 +64,59 @@
 
             <div class="sesion_options">
               <ul>
-                <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión">Iniciar sesión</a></li>
+                <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a></li>
                 <li class="register"><span>o bien, </span><a href="" title="Registrarse">crea una cuenta</a></li>
               </ul>
             </div>
+            <!-- Login Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"　aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="loginModalLabel">Ingresar a Estamos Capacitados</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <form class="form-horizontal" role="form">
+                          <div class="form-group">
+                            <label for="txtRut" class="col-sm-2 control-label">
+                              Rut</label>
+                            <div class="col-sm-12">
+                              <input type="numeric" class="form-control" id="txtRut" placeholder="Sin puntos ni guión" required>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="txtPassword" class=" col-sm-3 control-label">
+                              Contraseña</label>
+                            <a href="#" class="col-sm-offset-1 col-sm-8">Recuperar Contraseña</a>
+                           <div class="col-sm-12">
+                            <input type="password" class="form-control" id="txtPassword" placeholder="Contraseña" required>
+                           </div>
+                          </div>
+                          <div class="form-group last">
+                            <div class="col-sm-9">
+                              <button type="submit" class="btn btn-success btn-sm">
+                                Entrar</button>
+                              <button type="reset" class="btn btn-default btn-sm">
+                                Borrar</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-sm-6">
+                        <div><h3>Si no tienes una cuenta</h3></div>
+                        <p>Puedes <a href="#">registrarte</a> en Estamos Capacitados</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div> 
         </section>
 
