@@ -9,11 +9,12 @@
 */
 
 /*COLORS*/
-$primary_color: #FFFFFF; /*BLANCO*/
-$secondary_color: #CBD436; /*AMARILLO*/
-$tertiary_color: #2EAB59; /*VERDE*/
-$quaternary_color: #007EE5; /*AZUL*/
-$quinary_color: #000000; /*NEGRO*/
+$white_color: #FFFFFF; /*BLANCO*/
+$yellow_color: #F7BF19; /*AMARILLO*/
+$green_color: #2EAB59; /*VERDE*/
+$blue_color: #007EE5; /*AZUL*/ 
+$black_color: #1F1F1F; /*NEGRO*/
+$gray_color: #dfdfdf; /*GRIS*/
 
 /*FONTS*/
 $primary_font: 'Montserrat', sans-serif;
@@ -25,14 +26,13 @@ $secondary_font: 'Raleway', sans-serif;
   /*
   <----------TRANSICIONES---------->
   */
-@mixin all-transition($time) {
+@mixin all_transition($time) {
   -webkit-transition: all $time ease; /* Safari and Chrome */
   -moz-transition: all $time ease; /* Firefox */
   -ms-transition: all $time ease; /* IE 9 */
   -o-transition: all $time ease; /* Opera */
   transition: all $time ease;  
 }
-
   /*
   <----------ESCALA CRECIMIENTO ITEMS---------->
   */
@@ -44,13 +44,12 @@ $secondary_font: 'Raleway', sans-serif;
   transform: scale($scale);
 }
 
-
 /*
 ==============GENERAL CLASS==============
 */
 
 .welcome_background {
-  background-image: url('../img/Silla1.jpg');
+  background-image: url('../img/Sky.jpg');
   background-size: cover;
 }
 
@@ -58,70 +57,122 @@ $secondary_font: 'Raleway', sans-serif;
 ==============HEADER==============
 */
 header {
-  border-bottom: 1px solid $secondary_color;
-  box-shadow: 0px 1px 2px $secondary_color;
+  border-bottom: 1px solid $gray_color;
 
   /*
   <----------ACCESIBILIDAD-REDES SOCIALES-PUBLICAR---------->
   */
   .top_header {
-    background: $quinary_color;
-    height: 45px;
-    box-shadow: 0px 0px 1px $quinary_color;
+    background: $black_color;
+    height: 12vh;
+    min-height: 46px;
 
-    .top_margin {
-      margin: 0 20px;
+    .top_container {
+      padding: 7px 0;
+      width: 90%;
+      margin: 0 auto;
 
-      .top_buttons {
-        display: inline-block;
+      .top_access {
+        padding-top: 1px;
 
-        .top_access {
-          display: inline-block;
+        ul {
+          font-size: 1.5em;
+          margin: 0;
+          padding-left: 0; 
 
-          button {
-            border-radius: 20px;
-            width: 33px;
-            height: 33px;
-            background: white;
-
-            i {
-              font-size: 20px;
+          li {
+            width: 2em;
+            border: 1px solid transparent;
+            background: $yellow_color;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+            
+            a {
+              color: $white_color;
             }
-          }
-        }
 
-        .top_social {
-          padding-top: 5px; 
-          display: inline-block;
-          line-height: 0;
-
-          ul {
-            li {
-              font-size: 28px;
-              display: inline-block;
-
-              a {
-                color: $primary_color !important;
-
-                &:hover {
-                  color: $tertiary_color !important;
-                }
-              }
+            &:hover {
+              background: lighten($yellow_color, 10%);
             }
           }
         }
       }
 
       .publicar{
-        display: inline-block;
-        float: right;
-        text-align: right;
 
         button {
-          margin-top: 5px;
-          background: $tertiary_color;
-          width: 140px;
-          color: $primary_color;
+          margin: auto 0;
+          font-weight: 700; 
+          background: $green_color;
+          width: 11em;
+          color: $white_color;
+          @include all_transition(0.3s);
+
+          &:hover {
+            background: lighten($green_color, 10%);
+          }
+        }
+      }
+
+      .top_social {
+        padding-top: 2px;
+
+        ul {
+          font-size: 1.5em;
+          padding-left: 0;
+          margin: 0;
+
+          li {
+            width: 1.7em;
+            display: inline-block;
+            border-radius: 5px;
+          }
+
+          .facebook {
+            background: #3B579D;
+            @include all_transition(0.5s);
+            a{
+              color: white;
+            }
+
+            &:hover {
+              background: white;
+              a {
+                color: #3B579D;
+              }
+            }
+          }
+
+          .twitter {
+            background: #00ACED;
+            @include all_transition(0.5s);
+            a{
+              color: white;
+            }
+
+            &:hover {
+              background: white;
+              a {
+                color: #00ACED;
+              }
+            }
+          }
+
+          .linkedin {
+            background: #007BB6;
+            @include all_transition(0.5s);
+            a{
+              color: white;
+            }
+
+            &:hover {
+              background: white;
+              a {
+                color: #007BB6;
+              }
+            }
+          }
         }
       }
     }
@@ -131,63 +182,82 @@ header {
   <----------LOGO-SEARCH BAR-LOGIN---------->
   */
   .mid_header {
+    background: lighten($gray_color, 10%);
+    border-bottom: 1px solid $gray_color;
 
-    .mid_margin {
-      margin: 20px 20px 0 20px;
+    .row {
+      margin: 10px 0;
 
-      .logo {
-        display: inline-block;
+      img {
+        max-width: 300px;
+      }
 
-        img {
-          max-width: 300px;
-        }
-      } 
 
-      .search_bar {
-        margin-left: 20px; 
-        display: inline-block;
-        position: absolute;
+      .header_search_bar {
+        padding: 25px 0;
 
         form {
+          height: 40px;
 
           input {
-            width: 450px;
+            font-weight: 700;
+            width: 32vw;
+            min-width: 250px;
+            background: transparent;
             padding-left: 15px;
-            height: 35px;
-            border-radius: 4px;
-            border: 1px solid gray;
+            height: inherit;
+            border-radius: 3px 0 0 3px;
+            border: 1px solid $blue_color;
+            @include all_transition(0.3s);
+
+            &:focus {
+              background-color: $white_color;
+            }
           }
 
           button {
-            height: 35px;
+            background-color: $blue_color;
+            position: absolute;
+            height: inherit;
+            width: 46px;
+            border-radius: 0 3px 3px 0;
+            border: 1px solid $blue_color;
+
+            &:hover {
+              background-color: lighten($blue_color, 10%);
+              border: 1px solid lighten($blue_color, 10%);
+            }
+
+            i {
+              font-size: 18px;
+              color: $white_color;
+            }
           }
         }
       }
 
       .sesion_options{
-        float: right;
+        padding: 20px 0 0 20px;
 
         ul {
-          display: inline-block;
           list-style: none;
-
-          li {
-            text-align: center;
-
-            a {
-              color: $quaternary_color;
-            }
+            
+          a {
+            color: $blue_color;
           }
 
           .login a {
             text-decoration: none;
             font-size: 15px;
+            font-weight: 700;
             padding: 10px;
             border-radius: 5px;
+            border: 1px solid $blue_color;
+            @include all_transition(0.3s);
 
             &:hover{
-              border: 1px solid $quaternary_color;
-              color: lighten($quaternary_color, 10%);
+              color: $white_color;
+              background: $blue_color;
             }
           }
 
@@ -221,7 +291,6 @@ header {
     }
   }
 }
-
 /*
 ==============CUERPO==============
 */
@@ -229,68 +298,68 @@ header {
   <----------BIENVENIDA---------->
   */
 .welcome {
-  border-bottom: 1px solid black;
-  color: $primary_color;
-  height: 400px;
+  border-bottom: 1px solid $gray_color;
+  color: $white_color;
+  
+  .row {
+    /*TITULO BIENVENIDA*/
+    .welcome_title {
+      font-size: 1.5em;
 
-  /*TITULO BIENVENIDA*/
-  .welcome_title {
-    text-align: center;
-    font-size: 30px;
-
-    h1 {
-      padding-top: 20px;
-      font-family: $secondary_font;
-      color: white;
+      h1 {
+        font-family: $secondary_font;
+        color: $white_color;
+      }
     }
-  }
 
-  figure {
-    text-align: center;
-    margin-bottom: 15px;
+    figure {
+      margin-bottom: 10px;
 
-    img {
-      width: 300px;
+      img {
+        width: 30vw;
+      }
     }
-  }
 
-  /*BARRA BUSQUEDA*/
-  .welcome_search {
-    height: 50px;
+    /*BARRA BUSQUEDA*/
+    .welcome_search {
+      height: 50px;
 
-    .form_search {
-      margin: auto;
-      width: 55%;
-      height: inherit;
-      background: $quinary_color;
-      opacity: 0.9;
-      border-radius: 4px;
-      padding: 1px;
-
-      input {
-        margin: 2px 0 2px 2px;
-        padding-left: 15px;
-        color: black;
-        height: 43px;
-        width: 79%;
-        border: 0; 
+      .form_search {
+        margin: auto;
+        width: 55%;
+        background: $black_color;
         border-radius: 4px;
-      }
+        padding: 1px;
 
-      button {
-        background: $secondary_color;
-        margin: 2px 2px 2px 0;
-        float: right;
-        width: 20%;
-        height: 43px;
-        font-size: 20px;
+        input {
+          background: $gray_color;
+          margin: 2px 0 2px 2px;
+          padding-left: 15px;
+          color: black;
+          height: 43px;
+          width: 79%;
+          border: 0; 
+          border-radius: 4px;
+
+          &:focus {
+            background: $white_color;
+          }
+        }
+
+        button {
+          background: $yellow_color;
+          margin: 2px 2px 2px 0;
+          float: right;
+          width: 20%;
+          height: 43px;
+          font-size: 20px;
+        }
       }
     }
-  }
 
-  h3 {
-    text-align: center;
-    font-size: 18px;
+    h3 {
+      font-size: 18px;
+    }
   }
 }
  
@@ -298,10 +367,10 @@ header {
   <----------SERVICIOS---------->
   */
 .services {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid $gray_color;
 
   .row {
-    margin: 20px 0;
+    margin: 25px 0;
 
     .service_item {
       display: inline-block;
@@ -332,14 +401,13 @@ header {
         margin: 20px 0;
         
         .success_employee {
-          text-align: center;
           display: inline-block;
 
           img {
             width: 200px;
             border: 1px solid gray;
             box-shadow: 2px 2px 4px black;
-            @include all-transition(1s);
+            @include all_transition(1s);
 
             &:hover {
               @include scale-transform(1.05);
@@ -366,22 +434,21 @@ header {
 ==============FOOTER==============
 */
 footer {
-  box-shadow: 0px -2px 5px $quinary_color;
+  box-shadow: 0px -2px 5px $black_color;
   position: relative;
   height: 251px;
-  background: $quinary_color;
+  background: black;
 
   /*
   <----------LOGOS PARTNERS---------->
   */
   .partners {
-    text-align: center;
     border-bottom: 1px solid #434343;
 
     img {
       width: 100px;
       margin: 0 20px;
-      @include all-transition(1s);
+      @include all_transition(1s);
 
       &:hover {
         @include scale-transform(1.25);
@@ -404,7 +471,7 @@ footer {
         margin: 10px 0; 
 
         a {
-          color: $primary_color;
+          color: $white_color;
         }
       }
     }
@@ -422,10 +489,10 @@ footer {
         display: inline-block;
         margin: 0 5px;
         a {
-          color: $primary_color !important;
+          color: $white_color !important;
 
           &:hover {
-            color: $secondary_color !important;
+            color: $yellow_color !important;
           }
         }
       }

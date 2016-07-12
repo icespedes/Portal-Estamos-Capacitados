@@ -12,6 +12,7 @@
 /*VERDE*/
 /*AZUL*/
 /*NEGRO*/
+/*GRIS*/
 /*FONTS*/
 /*
 ==============MIXINS==============
@@ -26,15 +27,14 @@
 ==============GENERAL CLASS==============
 */
 .welcome_background {
-  background-image: url("../img/Silla1.jpg");
+  background-image: url("../img/Sky.jpg");
   background-size: cover; }
 
 /*
 ==============HEADER==============
 */
 header {
-  border-bottom: 1px solid #CBD436;
-  box-shadow: 0px 1px 2px #CBD436;
+  border-bottom: 1px solid #dfdfdf;
   /*
   <----------ACCESIBILIDAD-REDES SOCIALES-PUBLICAR---------->
   */
@@ -45,81 +45,181 @@ header {
   <----------BARRA DE NAVEGACION---------->
   */ }
   header .top_header {
-    background: #000000;
-    height: 45px;
-    box-shadow: 0px 0px 1px #000000; }
-    header .top_header .top_margin {
-      margin: 0 20px; }
-      header .top_header .top_margin .top_buttons {
-        display: inline-block; }
-        header .top_header .top_margin .top_buttons .top_access {
-          display: inline-block; }
-          header .top_header .top_margin .top_buttons .top_access button {
-            border-radius: 20px;
-            width: 33px;
-            height: 33px;
-            background: white; }
-            header .top_header .top_margin .top_buttons .top_access button i {
-              font-size: 20px; }
-        header .top_header .top_margin .top_buttons .top_social {
-          padding-top: 5px;
-          display: inline-block;
-          line-height: 0; }
-          header .top_header .top_margin .top_buttons .top_social ul li {
-            font-size: 28px;
-            display: inline-block; }
-            header .top_header .top_margin .top_buttons .top_social ul li a {
-              color: #FFFFFF !important; }
-              header .top_header .top_margin .top_buttons .top_social ul li a:hover {
-                color: #2EAB59 !important; }
-      header .top_header .top_margin .publicar {
-        display: inline-block;
-        float: right;
-        text-align: right; }
-        header .top_header .top_margin .publicar button {
-          margin-top: 5px;
-          background: #2EAB59;
-          width: 140px;
-          color: #FFFFFF; }
-  header .mid_header .mid_margin {
-    margin: 20px 20px 0 20px; }
-    header .mid_header .mid_margin .logo {
-      display: inline-block; }
-      header .mid_header .mid_margin .logo img {
+    background: #1F1F1F;
+    height: 12vh;
+    min-height: 46px; }
+    header .top_header .top_container {
+      padding: 7px 0;
+      width: 90%;
+      margin: 0 auto; }
+      header .top_header .top_container .top_access {
+        padding-top: 1px; }
+        header .top_header .top_container .top_access ul {
+          font-size: 1.5em;
+          margin: 0;
+          padding-left: 0; }
+          header .top_header .top_container .top_access ul li {
+            width: 2em;
+            border: 1px solid transparent;
+            background: #F7BF19;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer; }
+            header .top_header .top_container .top_access ul li a {
+              color: #FFFFFF; }
+            header .top_header .top_container .top_access ul li:hover {
+              background: #f9cd4a; }
+      header .top_header .top_container .publicar button {
+        margin: auto 0;
+        font-weight: 700;
+        background: #2EAB59;
+        width: 11em;
+        color: #FFFFFF;
+        -webkit-transition: all 0.3s ease;
+        /* Safari and Chrome */
+        -moz-transition: all 0.3s ease;
+        /* Firefox */
+        -ms-transition: all 0.3s ease;
+        /* IE 9 */
+        -o-transition: all 0.3s ease;
+        /* Opera */
+        transition: all 0.3s ease; }
+        header .top_header .top_container .publicar button:hover {
+          background: #40cc70; }
+      header .top_header .top_container .top_social {
+        padding-top: 2px; }
+        header .top_header .top_container .top_social ul {
+          font-size: 1.5em;
+          padding-left: 0;
+          margin: 0; }
+          header .top_header .top_container .top_social ul li {
+            width: 1.7em;
+            display: inline-block;
+            border-radius: 5px; }
+          header .top_header .top_container .top_social ul .facebook {
+            background: #3B579D;
+            -webkit-transition: all 0.5s ease;
+            /* Safari and Chrome */
+            -moz-transition: all 0.5s ease;
+            /* Firefox */
+            -ms-transition: all 0.5s ease;
+            /* IE 9 */
+            -o-transition: all 0.5s ease;
+            /* Opera */
+            transition: all 0.5s ease; }
+            header .top_header .top_container .top_social ul .facebook a {
+              color: white; }
+            header .top_header .top_container .top_social ul .facebook:hover {
+              background: white; }
+              header .top_header .top_container .top_social ul .facebook:hover a {
+                color: #3B579D; }
+          header .top_header .top_container .top_social ul .twitter {
+            background: #00ACED;
+            -webkit-transition: all 0.5s ease;
+            /* Safari and Chrome */
+            -moz-transition: all 0.5s ease;
+            /* Firefox */
+            -ms-transition: all 0.5s ease;
+            /* IE 9 */
+            -o-transition: all 0.5s ease;
+            /* Opera */
+            transition: all 0.5s ease; }
+            header .top_header .top_container .top_social ul .twitter a {
+              color: white; }
+            header .top_header .top_container .top_social ul .twitter:hover {
+              background: white; }
+              header .top_header .top_container .top_social ul .twitter:hover a {
+                color: #00ACED; }
+          header .top_header .top_container .top_social ul .linkedin {
+            background: #007BB6;
+            -webkit-transition: all 0.5s ease;
+            /* Safari and Chrome */
+            -moz-transition: all 0.5s ease;
+            /* Firefox */
+            -ms-transition: all 0.5s ease;
+            /* IE 9 */
+            -o-transition: all 0.5s ease;
+            /* Opera */
+            transition: all 0.5s ease; }
+            header .top_header .top_container .top_social ul .linkedin a {
+              color: white; }
+            header .top_header .top_container .top_social ul .linkedin:hover {
+              background: white; }
+              header .top_header .top_container .top_social ul .linkedin:hover a {
+                color: #007BB6; }
+  header .mid_header {
+    background: #f9f9f9;
+    border-bottom: 1px solid #dfdfdf; }
+    header .mid_header .row {
+      margin: 10px 0; }
+      header .mid_header .row img {
         max-width: 300px; }
-    header .mid_header .mid_margin .search_bar {
-      margin-left: 20px;
-      display: inline-block;
-      position: absolute; }
-      header .mid_header .mid_margin .search_bar form input {
-        width: 450px;
-        padding-left: 15px;
-        height: 35px;
-        border-radius: 4px;
-        border: 1px solid gray; }
-      header .mid_header .mid_margin .search_bar form button {
-        height: 35px; }
-    header .mid_header .mid_margin .sesion_options {
-      float: right; }
-      header .mid_header .mid_margin .sesion_options ul {
-        display: inline-block;
-        list-style: none; }
-        header .mid_header .mid_margin .sesion_options ul li {
-          text-align: center; }
-          header .mid_header .mid_margin .sesion_options ul li a {
-            color: #007EE5; }
-        header .mid_header .mid_margin .sesion_options ul .login a {
-          text-decoration: none;
-          font-size: 15px;
-          padding: 10px;
-          border-radius: 5px; }
-          header .mid_header .mid_margin .sesion_options ul .login a:hover {
+      header .mid_header .row .header_search_bar {
+        padding: 25px 0; }
+        header .mid_header .row .header_search_bar form {
+          height: 40px; }
+          header .mid_header .row .header_search_bar form input {
+            font-weight: 700;
+            width: 32vw;
+            min-width: 250px;
+            background: transparent;
+            padding-left: 15px;
+            height: inherit;
+            border-radius: 3px 0 0 3px;
             border: 1px solid #007EE5;
-            color: #1998ff; }
-        header .mid_header .mid_margin .sesion_options ul .register {
-          margin-top: 20px; }
-          header .mid_header .mid_margin .sesion_options ul .register a {
-            font-size: 13px; }
+            -webkit-transition: all 0.3s ease;
+            /* Safari and Chrome */
+            -moz-transition: all 0.3s ease;
+            /* Firefox */
+            -ms-transition: all 0.3s ease;
+            /* IE 9 */
+            -o-transition: all 0.3s ease;
+            /* Opera */
+            transition: all 0.3s ease; }
+            header .mid_header .row .header_search_bar form input:focus {
+              background-color: #FFFFFF; }
+          header .mid_header .row .header_search_bar form button {
+            background-color: #007EE5;
+            position: absolute;
+            height: inherit;
+            width: 46px;
+            border-radius: 0 3px 3px 0;
+            border: 1px solid #007EE5; }
+            header .mid_header .row .header_search_bar form button:hover {
+              background-color: #1998ff;
+              border: 1px solid #1998ff; }
+            header .mid_header .row .header_search_bar form button i {
+              font-size: 18px;
+              color: #FFFFFF; }
+      header .mid_header .row .sesion_options {
+        padding: 20px 0 0 20px; }
+        header .mid_header .row .sesion_options ul {
+          list-style: none; }
+          header .mid_header .row .sesion_options ul a {
+            color: #007EE5; }
+          header .mid_header .row .sesion_options ul .login a {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #007EE5;
+            -webkit-transition: all 0.3s ease;
+            /* Safari and Chrome */
+            -moz-transition: all 0.3s ease;
+            /* Firefox */
+            -ms-transition: all 0.3s ease;
+            /* IE 9 */
+            -o-transition: all 0.3s ease;
+            /* Opera */
+            transition: all 0.3s ease; }
+            header .mid_header .row .sesion_options ul .login a:hover {
+              color: #FFFFFF;
+              background: #007EE5; }
+          header .mid_header .row .sesion_options ul .register {
+            margin-top: 20px; }
+            header .mid_header .row .sesion_options ul .register a {
+              font-size: 13px; }
   header .navigation {
     margin: auto; }
     header .navigation nav {
@@ -133,59 +233,56 @@ header {
   <----------BIENVENIDA---------->
   */
 .welcome {
-  border-bottom: 1px solid black;
-  color: #FFFFFF;
-  height: 400px;
-  /*TITULO BIENVENIDA*/
-  /*BARRA BUSQUEDA*/ }
-  .welcome .welcome_title {
-    text-align: center;
-    font-size: 30px; }
-    .welcome .welcome_title h1 {
-      padding-top: 20px;
-      font-family: "Raleway", sans-serif;
-      color: white; }
-  .welcome figure {
-    text-align: center;
-    margin-bottom: 15px; }
-    .welcome figure img {
-      width: 300px; }
-  .welcome .welcome_search {
-    height: 50px; }
-    .welcome .welcome_search .form_search {
-      margin: auto;
-      width: 55%;
-      height: inherit;
-      background: #000000;
-      opacity: 0.9;
-      border-radius: 4px;
-      padding: 1px; }
-      .welcome .welcome_search .form_search input {
-        margin: 2px 0 2px 2px;
-        padding-left: 15px;
-        color: black;
-        height: 43px;
-        width: 79%;
-        border: 0;
-        border-radius: 4px; }
-      .welcome .welcome_search .form_search button {
-        background: #CBD436;
-        margin: 2px 2px 2px 0;
-        float: right;
-        width: 20%;
-        height: 43px;
-        font-size: 20px; }
-  .welcome h3 {
-    text-align: center;
-    font-size: 18px; }
+  border-bottom: 1px solid #dfdfdf;
+  color: #FFFFFF; }
+  .welcome .row {
+    /*TITULO BIENVENIDA*/
+    /*BARRA BUSQUEDA*/ }
+    .welcome .row .welcome_title {
+      font-size: 1.5em; }
+      .welcome .row .welcome_title h1 {
+        font-family: "Raleway", sans-serif;
+        color: #FFFFFF; }
+    .welcome .row figure {
+      margin-bottom: 10px; }
+      .welcome .row figure img {
+        width: 30vw; }
+    .welcome .row .welcome_search {
+      height: 50px; }
+      .welcome .row .welcome_search .form_search {
+        margin: auto;
+        width: 55%;
+        background: #1F1F1F;
+        border-radius: 4px;
+        padding: 1px; }
+        .welcome .row .welcome_search .form_search input {
+          background: #dfdfdf;
+          margin: 2px 0 2px 2px;
+          padding-left: 15px;
+          color: black;
+          height: 43px;
+          width: 79%;
+          border: 0;
+          border-radius: 4px; }
+          .welcome .row .welcome_search .form_search input:focus {
+            background: #FFFFFF; }
+        .welcome .row .welcome_search .form_search button {
+          background: #F7BF19;
+          margin: 2px 2px 2px 0;
+          float: right;
+          width: 20%;
+          height: 43px;
+          font-size: 20px; }
+    .welcome .row h3 {
+      font-size: 18px; }
 
 /*
   <----------SERVICIOS---------->
   */
 .services {
-  border-bottom: 1px solid gray; }
+  border-bottom: 1px solid #dfdfdf; }
   .services .row {
-    margin: 20px 0; }
+    margin: 25px 0; }
     .services .row .service_item {
       display: inline-block;
       text-align: center;
@@ -202,7 +299,6 @@ header {
     padding: 0px 30px;
     margin: 20px 0; }
     .case_success .row .success_box .success_employee_box .success_employee {
-      text-align: center;
       display: inline-block; }
       .case_success .row .success_box .success_employee_box .success_employee img {
         width: 200px;
@@ -234,15 +330,14 @@ header {
 ==============FOOTER==============
 */
 footer {
-  box-shadow: 0px -2px 5px #000000;
+  box-shadow: 0px -2px 5px #1F1F1F;
   position: relative;
   height: 251px;
-  background: #000000;
+  background: black;
   /*
   <----------LOGOS PARTNERS---------->
   */ }
   footer .partners {
-    text-align: center;
     border-bottom: 1px solid #434343; }
     footer .partners img {
       width: 100px;
@@ -289,4 +384,4 @@ footer {
         footer .contact .foot_social li a {
           color: #FFFFFF !important; }
           footer .contact .foot_social li a:hover {
-            color: #CBD436 !important; }
+            color: #F7BF19 !important; }

@@ -13,8 +13,6 @@
       <!--Titulo e Icon-->
       <title>Estamos Capacitados</title>
       <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
-      <!--FACEBOOK SDK-->
     </head> 
 
     <body>
@@ -22,55 +20,66 @@
       <header> 
       <!--TOP HEADER-->
         <section class="top_header">
-          <div class="top_margin">
-
-            <div class="top_buttons">
-              <div class="top_access">
-                <button title="Aumentar Fuente"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-                <button title="Disminuir Fuente"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
-                <button title="Accesibilidad"><i class="fa fa-wheelchair" aria-hidden="true"></i></button>
+          <div class="top_container">
+            <div class="row">
+              <div class="col-sm-4 col-md-2 hidden-xs">
+                <div class="top_access">
+                  <ul class="text-center">
+                    <li><a title="Aumentar Fuente"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Disminuir Fuente"><i class="fa fa-minus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Accesibilidad"><i class="fa fa-wheelchair" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="top_social">
-                <ul>
-                  <li><a href="#" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                  <li><a href="#" title="Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                  <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <div class="col-sm-4 col-md-8">
+                <div class="publicar text-right">
+                  <button class="btn" title="Publicar Oferta" href="#">Publicar</button>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-2 top_social hidden-xs">
+                <ul class="text-center">
+                  <li class="facebook"><a target="_blank" href="https://www.facebook.com/estamoscapacitados" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></i></a></li>
+                  <li class="twitter"><a target="_blank" href="https://twitter.com/ECapacitados" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/estamos-capacitados" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
               </div>
-            </div>
-
-            <div class="publicar">
-              <button class="btn" title="Publicar Oferta" href="#">
-                Publicar
-              </button>
             </div>
           </div>
         </section>
 
         <section class="mid_header">
-          <div class="mid_margin">
-            <figure class="logo" title="Estamos Capacitados"> <!--logo-->
-              <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
-            </figure>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <!--LOGO ESTAMOS CAPACITADOS-->
+                <figure class="logo" title="Estamos Capacitados">
+                  <a href="index.html">
+                    <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
+                  </a> 
+                </figure>
+              </div>
 
-            <div class="search_bar"> <!--search_bar-->
-              <form>
-                <input type="text" title="Buscar" placeholder="¿Qué estás buscando?">
-                <button href="#" title="Buscar" class="btn">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
+              <div class="col-sm-6 col-md-5 header_search_bar">
+                <!--BARRA DE BUSQUEDA HEADER-->
+                <form>
+                  <input type="text" title="Buscar" placeholder="¿Qué estás buscando?" maxlength="40" autocomplete="off">
+                  <button href="#" title="Buscar" class="btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+              <div class="col-sm-6 col-md-3 sesion_options">
+                <!--OPCIONES DE LOGIN-->
+                <ul class="text-center">
+                  <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a></li>
+                  <li class="register"><span>o bien, </span><a href="registro.html" title="Registrarse">crea una cuenta</a></li>
+                </ul>
+              </div>
             </div>
-
-            <div class="sesion_options">
-              <ul>
-                <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a></li>
-                <li class="register"><span>o bien, </span><a href="registro.html" title="Registrarse">crea una cuenta</a></li>
-              </ul>
-            </div>
-            <!-- Login Modal -->
+            <!--MODAL LOGIN-->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"　aria-hidden="true">
               <div class="modal-dialog" role="document">
+
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -78,6 +87,7 @@
                     </button>
                     <h4 class="modal-title" id="loginModalLabel">Ingresar a Estamos Capacitados</h4>
                   </div>
+
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-sm-6">
@@ -92,7 +102,7 @@
                           <div class="form-group">
                             <label for="txtPassword" class=" col-sm-3 control-label">
                               Contraseña</label>
-                            <a href="#" class="col-sm-offset-1 col-sm-8">Recuperar Contraseña</a>
+                            <a href="#" class="col-sm-offset-1 col-sm-8 recovery_pass">Recuperar Contraseña</a>
                            <div class="col-sm-12">
                             <input type="password" class="form-control" id="txtPassword" placeholder="Contraseña" required>
                            </div>
@@ -108,7 +118,7 @@
                         </form>
                       </div>
                       <div class="col-sm-6">
-                        <div><h3>Si no tienes una cuenta</h3></div>
+                        <div><h3>¿No tienes una cuenta?</h3></div>
                         <p>Puedes <a href="registro.html">registrarte</a> en Estamos Capacitados</p>
                       </div>
                     </div>
@@ -116,14 +126,14 @@
                 </div>
               </div>
             </div>
-
           </div> 
         </section>
 
-        <div class="navigation container"> <!--navigation-->
+        <!--PESTAÑAS DE NAVEGACION-->
+        <div class="navigation container"> 
           <nav> <!--menu-->
             <ul class="nav nav-tabs">
-              <li role="presentation" class="active"><a href="#">Quiénes Somos</a></li>
+              <li role="presentation"><a href="#">Quiénes Somos</a></li>
               <li role="presentation"><a href="#">Acerca de EC</a></li>
               <li role="presentation"><a href="#">Casos de Éxito</a></li>
               <li role="presentation"><a href="#">Mis Solicitudes</a></li>
@@ -138,25 +148,36 @@
         <!--BIENVENIDA-->
         <section class="welcome welcome_background">
           <div class="container">
-            <div class="welcome_title"> <!--welcome-->
-              <h1>
-                ¿Necesitas un servicio? <br>Encuéntralo en
-              </h1>
-            </div>
+            <div class="row">
+              <div class="col-sm-6 col-md-12">
+                <div class="welcome_title text-center"> <!--welcome-->
+                  <h1>
+                    ¿Necesitas un servicio? <br>Encuéntralo en
+                  </h1>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-12">
+                <figure class="text-center img-responsive">
+                  <img src="img/LogoEC.png" class="" alt="">
+                </figure>
+              </div>
 
-            <figure class="welcome_logo">
-              <img src="img/LogoEC.png" alt="">
-            </figure>
+              <div class="col-sm-6 col-md-12">
+              <!--BARRA DE BUSQUEDA CENTRAL-->
+                <div class="welcome_search hidden-xs"> 
+                  <form class="form_search">
+                    <input type="text" placeholder="Busca: Diseños, Traducciones, Programación">
+                    <button class="btn" href="#">Buscar</button>
+                  </form>
+                </div>
+              </div>
 
-            <div class="welcome_search"> <!--search_bar-->
-              <form class="form_search">
-                <input type="text" placeholder="Busca: Diseños, Traducciones, Programación">
-                <button class="btn" href="#">Buscar</button>
-              </form>
+              <div class="col-sm-6 col-md-12">
+                <h3 class="text-center">
+                  Trabajos con ❤ realizados por PeSD
+                </h3>
+              </div>
             </div>
-            <h3>
-              Trabajos con ❤ realizados por PeSD
-            </h3>
           </div>
         </section>
 
@@ -225,8 +246,8 @@
                     <div>
                       <h4>Trabajador de la semana</h4>
                     </div>
-                    <section class="success_employee">
-                      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhtAAAAJGMzOWJlNzZlLTUyNWQtNGZiNi1iMzA5LWFkZTI4NGM4ZjViMg.jpg" alt="">
+                    <section class="success_employee text-center">
+                      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhtAAAAJGMzOWJlNzZlLTUyNWQtNGZiNi1iMzA5LWFkZTI4NGM4ZjViMg.jpg" alt="Foto empleado del mes">
                       <div class="success_employee_name">
                         <label>Ignacio Céspedes C.</label>
                       </div>
@@ -260,29 +281,32 @@
       <!--FOOTER-->
       <footer>
         <section class="container">
-          <div class="partners"> <!--partners-->
+          <!--PARTNERS-->
+          <div class="partners text-center"> 
             <img src="img/logo_corfo.png" alt="Logo Corfo"> 
             <img src="img/logo_mutual.png" alt="Logo Mutual">
             <img src="img/logo_sofofa.png" alt="Logo Sofofa">
             <img src="img/logo_angelhack.png" alt="Logo AngelHack">
           </div>
-          <div class="contact"><!--contact-->
-            <ul class="footer_menu"><!--footer_menu-->
+          <!--MENU FOOTER-->
+          <div class="contact">
+            <ul class="footer_menu">
               <li><a href="#">Quiénes Somos</a></li>
               <li><a href="#">Estadísticas</a></li>
               <li><a href="#">Casos de Éxito</a></li>
             </ul>
-            <ul class="foot_social"><!--social-->
-              <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+            <!--REDES SOCIALES-->
+            <ul class="foot_social">
+              <li><a href="https://www.facebook.com/estamoscapacitados"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+              <li><a href="https://twitter.com/ECapacitados"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/estamos-capacitados"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCX4uF1ROv24UQxJNgzH0x6g"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
             </ul>
           </div>
-         
         </section>
       </footer>
-      <!--Llamadas Scripts-->
+
+      <!--JAVASCRIPTS-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
