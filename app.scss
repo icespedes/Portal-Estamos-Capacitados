@@ -473,10 +473,17 @@ footer {
 
       .create_acount_title {
         margin-bottom: 30px;
-
         h2 {
           border-bottom: 1px solid $gray_color;
           margin: 0;
+        }
+      }
+
+      .form-group {
+        margin-bottom: 0px;
+
+        .form-control-feedback {
+          right: 12px;
         }
       }
 

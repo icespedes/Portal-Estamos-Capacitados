@@ -369,6 +369,10 @@ footer {
         .register .row_register_box .register_box .create_acount_title h2 {
           border-bottom: 1px solid #dfdfdf;
           margin: 0; }
+      .register .row_register_box .register_box .form-group {
+        margin-bottom: 0px; }
+        .register .row_register_box .register_box .form-group .form-control-feedback {
+          right: 12px; }
       .register .row_register_box .register_box .register_btn_box {
         margin-top: 20px; }
 
