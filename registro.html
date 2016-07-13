@@ -3,7 +3,7 @@
     <head>
       <!--CSS-->
       <link href="css/app.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-      <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
       <!--Browser Config-->
       <meta charset="utf-8">
@@ -13,8 +13,6 @@
       <!--Titulo e Icon-->
       <title>Estamos Capacitados</title>
       <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
-      <!--FACEBOOK SDK-->
     </head> 
 
     <body>
@@ -22,55 +20,66 @@
       <header> 
       <!--TOP HEADER-->
         <section class="top_header">
-          <div class="top_margin">
-
-            <div class="top_buttons">
-              <div class="top_access">
-                <button title="Aumentar Fuente"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-                <button title="Disminuir Fuente"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
-                <button title="Accesibilidad"><i class="fa fa-wheelchair" aria-hidden="true"></i></button>
+          <div class="top_container">
+            <div class="row">
+              <div class="col-sm-4 col-md-2 hidden-xs">
+                <div class="top_access">
+                  <ul class="text-center">
+                    <li><a title="Aumentar Fuente" type="button" class="btn btn-warning"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Disminuir Fuente" class="btn btn-warning"><i class="fa fa-minus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Accesibilidad" class="btn btn-warning"><i class="fa fa-wheelchair" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="top_social">
-                <ul>
-                  <li><a href="#" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-                  <li><a href="#" title="Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                  <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <div class="col-sm-4 col-md-8">
+                <div class="text-right">
+                  <button type="button" class="btn btn-success btn_publicar" title="Publicar Oferta" href="#">Publicar</button>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-2 top_social hidden-xs">
+                <ul class="text-center">
+                  <li class="facebook"><a target="_blank" href="https://www.facebook.com/estamoscapacitados" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></i></a></li>
+                  <li class="twitter"><a target="_blank" href="https://twitter.com/ECapacitados" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/estamos-capacitados" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
               </div>
-            </div>
-
-            <div class="publicar">
-              <button class="btn" title="Publicar Oferta" href="#">
-                Publicar
-              </button>
             </div>
           </div>
         </section>
 
         <section class="mid_header">
-          <div class="mid_margin">
-            <figure class="logo" title="Estamos Capacitados"> <!--logo-->
-              <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
-            </figure>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-4 logo_EC">
+                <!--LOGO ESTAMOS CAPACITADOS-->
+                <figure title="Home de Estamos Capacitados">
+                  <a href="index.html">
+                    <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
+                  </a> 
+                </figure>
+              </div>
 
-            <div class="search_bar"> <!--search_bar-->
-              <form>
-                <input type="text" title="Buscar" placeholder="¿Qué estás buscando?">
-                <button href="#" title="Buscar" class="btn">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
+              <div class="col-sm-6 col-md-5 header_search_bar">
+                <!--BARRA DE BUSQUEDA HEADER-->
+                <form>
+                  <input type="text" title="Buscar" placeholder="¿Qué estás buscando?" maxlength="40" autocomplete="off">
+                  <button href="#" title="Buscar" class="btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+              <div class="col-sm-6 col-md-3 sesion_options">
+                <!--OPCIONES DE LOGIN-->
+                <ul class="text-center">
+                  <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a></li>
+                  <li class="register"><span>o bien, </span><a href="registro.html" title="Registrarse">crea una cuenta</a></li>
+                </ul>
+              </div>
             </div>
-
-            <div class="sesion_options">
-              <ul>
-                <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a></li>
-                <li class="register"><span>o bien, </span><a href="" title="Registrarse">crea una cuenta</a></li>
-              </ul>
-            </div>
-            <!-- Login Modal -->
+            <!--MODAL LOGIN-->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"　aria-hidden="true">
               <div class="modal-dialog" role="document">
+
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -78,6 +87,7 @@
                     </button>
                     <h4 class="modal-title" id="loginModalLabel">Ingresar a Estamos Capacitados</h4>
                   </div>
+
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-sm-6">
@@ -92,7 +102,7 @@
                           <div class="form-group">
                             <label for="txtPassword" class=" col-sm-3 control-label">
                               Contraseña</label>
-                            <a href="#" class="col-sm-offset-1 col-sm-8">Recuperar Contraseña</a>
+                            <a href="#" class="col-sm-offset-1 col-sm-8 recovery_pass">Recuperar Contraseña</a>
                            <div class="col-sm-12">
                             <input type="password" class="form-control" id="txtPassword" placeholder="Contraseña" required>
                            </div>
@@ -108,66 +118,162 @@
                         </form>
                       </div>
                       <div class="col-sm-6">
-                        <div><h3>Si no tienes una cuenta</h3></div>
-                        <p>Puedes <a href="#">registrarte</a> en Estamos Capacitados</p>
+                        <div><h3>¿No tienes una cuenta?</h3></div>
+                        <p>Puedes <a href="registro.html">registrarte</a> en Estamos Capacitados</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div> 
         </section>
 
-        <div class="navigation container"> <!--navigation-->
+        <!--PESTAÑAS DE NAVEGACION-->
+        <div class="navigation container"> 
           <nav> <!--menu-->
             <ul class="nav nav-tabs">
-              <li role="presentation" class="active"><a href="#">Quiénes Somos</a></li>
-              <li role="presentation"><a href="#">Acerca de EC</a></li>
-              <li role="presentation"><a href="#">Casos de Éxito</a></li>
-              <li role="presentation"><a href="#">Mis Solicitudes</a></li>
-              <li role="presentation"><a href="#">Mis Trabajos</a></li>
+              <li title="Quiénes Somos" role="presentation"><a href="#">Quiénes Somos</a></li>
+              <li title="Acerca de Estamos Capacitados" role="presentation"><a href="#">Acerca de EC</a></li>
+              <li title="Casos de Éxito" role="presentation"><a href="#">Casos de Éxito</a></li>
+              <li title="Solicitudes de Servicio" role="presentation"><a href="#">Mis Solicitudes</a></li>
+              <li title="Historial de Trabajos" role="presentation"><a href="#">Mis Trabajos</a></li>
             </ul>
           </nav>
         </div>
       </header>
-      
+
       <!--CUERPO-->
-      <section>
-        <!--REGISTRO-->
-        <section>
-          
-        </section> 
+      <section id="main-container">
+        <section class="register">
+          <div class="container">
+            <div class="row row_register_box">
+              <div class="col-sm-6 col-md-12 text-center">
+                <h2>¡Bienvenido a Estamos Capacitados!</h2>
+                <h4>Aquí encontraras miles de servicios, con transacciones seguras a precios convenientes.</h4>
+              </div>
+              <div class="col-sm-6 col-md-offset-2 col-md-8 card register_box">
+                <form>
+                  <div class="create_acount_title text-info">
+                    <h2>Crear Cuenta</h2>
+                  </div>
+                  <!--Nombres-->
+                  <div class="form-group col-md-6">
+                    <label for="txtName">Nombres</label>
+                    <input type="text" class="form-control" title="Ingrese ambos nombres" id="txtUserName" required>
+                  </div>
+                  <!--Apellidos-->
+                  <div class="form-group col-md-6">
+                    <label for="txtLastName">Apellidos</label>
+                    <input type="text" class="form-control" title="Ingrese ambos apellidos" id="txtLastName" required>
+                  </div>
+                  <!--Rut-->
+                  <div class="form-group col-md-6">
+                    <label for="txtRut">Rut</label>
+                    <input type="text" class="form-control" id="txtRut" title="Ej: 12345678-5" placeholder="12345678-5">
+                  </div>
+                  <!--Email-->
+                  <div class="form-group col-md-6">
+                    <label for="txtEmail">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="txtEmail" placeholder="ejemplo@ejemplo.cl" title="Correo Electrónico">
+                  </div>
+                  <!--Password-->
+                  <div class="form-group col-md-6">
+                    <label for="txtPassword">Contraseña</label>
+                    <input type="password" class="form-control" id="txtPassword" title="Contraseña" maxlength="10">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="txtConfirmPassword">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="txtConfirmPassword" title="Confirmar Contraseña" maxlength="10">
+                  </div>
+                  <!--Tipo Usuario EC-->
+                  <div class="form-group col-md-12">
+                    <label>Tipo de usuario a crear</label>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Usuario Consumidor
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Usuario Publicador (PeSD)
+                      </label>
+                    </div>                  
+                  </div>
+                  <!--Información de Usuarios-->
+                  <div class="col-md-12">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-info">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Más información sobre tipos de usuario
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            <b>Usuario Consumidor: </b> Usuario que accede a Estamos Capacitados para consumir servicios brindados por PeSD. 
+                            <br> <br>
+                            <b>Usuario Publicador (PeSD): </b> Persona en Situación de Discapacidad, que ofrece sus servicios a traves de Estamos Capacitados.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Terminos y Condiciones-->
+                  <div class="col-md-12">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> He leído y acepto los <a href="#">Términos y condiciones</a>
+                      </label>
+                    </div>
+                  </div>
+                  <!--Boton Crear Usuario-->
+                  <div class="col-md-12 text-center register_btn_box">
+                    <button type="submit" class="btn btn-success">Crear Usuario</button>
+                    <button type="reset" class="btn btn-default">Cancelar</button>                    
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
       <!--FOOTER-->
       <footer>
         <section class="container">
-          <div class="partners"> <!--partners-->
+          <!--PARTNERS-->
+          <div class="partners text-center"> 
             <img src="img/logo_corfo.png" alt="Logo Corfo"> 
             <img src="img/logo_mutual.png" alt="Logo Mutual">
             <img src="img/logo_sofofa.png" alt="Logo Sofofa">
             <img src="img/logo_angelhack.png" alt="Logo AngelHack">
           </div>
-          <div class="contact"><!--contact-->
-            <ul class="footer_menu"><!--footer_menu-->
+          <!--MENU FOOTER-->
+          <div class="contact">
+            <ul class="footer_menu">
               <li><a href="#">Quiénes Somos</a></li>
               <li><a href="#">Estadísticas</a></li>
               <li><a href="#">Casos de Éxito</a></li>
             </ul>
-            <ul class="foot_social"><!--social-->
-              <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+            <!--REDES SOCIALES-->
+            <ul class="foot_social">
+              <li><a href="https://www.facebook.com/estamoscapacitados"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+              <li><a href="https://twitter.com/ECapacitados"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/estamos-capacitados"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCX4uF1ROv24UQxJNgzH0x6g"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
             </ul>
           </div>
-         
         </section>
       </footer>
-      <!--Llamadas Scripts-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+      <!--SCRIPTS-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </body>
   </html>

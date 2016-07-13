@@ -15,9 +15,10 @@ $green_color: #2EAB59; /*VERDE*/
 $blue_color: #007EE5; /*AZUL*/ 
 $black_color: #1F1F1F; /*NEGRO*/
 $gray_color: #dfdfdf; /*GRIS*/
+$background_section: #f9f9f9; /*BLANCO SUAVE*/
 
 /*FONTS*/
-$primary_font: 'Montserrat', sans-serif;
+$primary_font: 'Helvetica Neue', sans-serif;
 $secondary_font: 'Raleway', sans-serif;
 
 /*
@@ -36,7 +37,7 @@ $secondary_font: 'Raleway', sans-serif;
   /*
   <----------ESCALA CRECIMIENTO ITEMS---------->
   */
-@mixin scale-transform($scale) {
+@mixin scale_transform($scale) {
   -webkit-transform: scale($scale);
   -moz-transform: scale($scale);
   -ms-transform: scale($scale);
@@ -64,8 +65,7 @@ header {
   */
   .top_header {
     background: $black_color;
-    height: 12vh;
-    min-height: 46px;
+    height: 46px;
 
     .top_container {
       padding: 7px 0;
@@ -73,46 +73,23 @@ header {
       margin: 0 auto;
 
       .top_access {
-        padding-top: 1px;
 
         ul {
-          font-size: 1.5em;
-          margin: 0;
           padding-left: 0; 
 
           li {
-            width: 2em;
-            border: 1px solid transparent;
-            background: $yellow_color;
-            border-radius: 5px;
             display: inline-block;
-            cursor: pointer;
-            
-            a {
-              color: $white_color;
-            }
 
-            &:hover {
-              background: lighten($yellow_color, 10%);
+            i {
+              font-size: 18px;
             }
           }
         }
       }
 
-      .publicar{
-
-        button {
-          margin: auto 0;
-          font-weight: 700; 
-          background: $green_color;
-          width: 11em;
-          color: $white_color;
-          @include all_transition(0.3s);
-
-          &:hover {
-            background: lighten($green_color, 10%);
-          }
-        }
+      .btn_publicar {
+        font-weight: 700; 
+        width: 11em;
       }
 
       .top_social {
@@ -192,7 +169,6 @@ header {
         max-width: 300px;
       }
 
-
       .header_search_bar {
         padding: 25px 0;
 
@@ -201,7 +177,7 @@ header {
 
           input {
             font-weight: 700;
-            width: 32vw;
+            width: 30vw;
             min-width: 250px;
             background: transparent;
             padding-left: 15px;
@@ -302,11 +278,13 @@ header {
   color: $white_color;
   
   .row {
+    margin-bottom: 15px;
     /*TITULO BIENVENIDA*/
     .welcome_title {
       font-size: 1.5em;
 
       h1 {
+        font-weight: 700;
         font-family: $secondary_font;
         color: $white_color;
       }
@@ -322,42 +300,46 @@ header {
 
     /*BARRA BUSQUEDA*/
     .welcome_search {
-      height: 50px;
 
       .form_search {
         margin: auto;
-        width: 55%;
+        width: 40vw;
         background: $black_color;
         border-radius: 4px;
         padding: 1px;
+        font-family: $primary_font;
 
         input {
+          font-weight: 700;
+          width: 32vw;
           background: $gray_color;
           margin: 2px 0 2px 2px;
           padding-left: 15px;
           color: black;
           height: 43px;
-          width: 79%;
           border: 0; 
-          border-radius: 4px;
+          border-radius: 3px 0 0 3px;
 
           &:focus {
             background: $white_color;
+            border: 1px solid $yellow_color;
           }
         }
 
         button {
-          background: $yellow_color;
+          font-weight: 700;
+          width: 7.6vw;
+          border-radius: 0 3px 3px 0;
+          position: absolute;
           margin: 2px 2px 2px 0;
-          float: right;
-          width: 20%;
           height: 43px;
-          font-size: 20px;
+          font-size: 18px;
         }
       }
     }
 
     h3 {
+      font-weight: 700;
       font-size: 18px;
     }
   }
@@ -379,6 +361,11 @@ header {
 
       .icon_box {
         font-size: 70px;
+        @include all_transition(0.5s);
+
+        &:hover {
+         @include scale_transform(1.25);
+        }
       }
     }
   }
@@ -388,47 +375,17 @@ header {
   <----------CASOS DE EXITO---------->
   */
 .case_success {
-  .row {
-    margin: 25px 0;
+  margin-bottom: 30px;
 
-    .success_box {
-      .success_title {
+  .success_box {
 
-      }
-  
-      .success_employee_box {
-        padding: 0px 30px;
-        margin: 20px 0;
-        
-        .success_employee {
-          display: inline-block;
+    .employee_img{
 
-          img {
-            width: 200px;
-            border: 1px solid gray;
-            box-shadow: 2px 2px 4px black;
-            @include all_transition(1s);
-
-            &:hover {
-              @include scale-transform(1.05);
-            }
-          }
-          .success_employee_name {
-            margin-top: 10px;
-            label {
-              margin: auto;
-            }
-          }
-        }
-        .success_employee_multimedia{
-          display: inline-block;
-        }
+      img {
+        width: 13vw;
       }
     }
-
-
   }
-
 }
 /*
 ==============FOOTER==============
@@ -451,7 +408,7 @@ footer {
       @include all_transition(1s);
 
       &:hover {
-        @include scale-transform(1.25);
+        @include scale_transform(1.25);
       }
     }
   }
@@ -500,5 +457,101 @@ footer {
   }
 }
 
+/*
+==============REGISTRO==============
+*/
+.register {
+  background: $background_section;
+
+  .row_register_box {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    .register_box {
+      background: $white_color;
+      padding: 20px;
+
+      .create_acount_title {
+        margin-bottom: 30px;
+
+        h2 {
+          border-bottom: 1px solid $gray_color;
+          margin: 0;
+        }
+      }
+
+      .register_btn_box {
+        margin-top: 20px;
+      }
+    }
+  } 
+}
 
 
+
+
+
+
+/*
+==============CARD==============
+*/
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}

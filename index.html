@@ -3,7 +3,7 @@
     <head>
       <!--CSS-->
       <link href="css/app.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-      <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
       <!--Browser Config-->
       <meta charset="utf-8">
@@ -25,15 +25,15 @@
               <div class="col-sm-4 col-md-2 hidden-xs">
                 <div class="top_access">
                   <ul class="text-center">
-                    <li><a title="Aumentar Fuente"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
-                    <li><a title="Disminuir Fuente"><i class="fa fa-minus-circle" aria-hidden="true"></i></a></li>
-                    <li><a title="Accesibilidad"><i class="fa fa-wheelchair" aria-hidden="true"></i></a></li>
+                    <li><a title="Aumentar Fuente" type="button" class="btn btn-warning"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Disminuir Fuente" class="btn btn-warning"><i class="fa fa-minus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Accesibilidad" class="btn btn-warning"><i class="fa fa-wheelchair" aria-hidden="true"></i></a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-sm-4 col-md-8">
-                <div class="publicar text-right">
-                  <button class="btn" title="Publicar Oferta" href="#">Publicar</button>
+                <div class="text-right">
+                  <button type="button" class="btn btn-success btn_publicar" title="Publicar Oferta" href="#">Publicar</button>
                 </div>
               </div>
               <div class="col-sm-4 col-md-2 top_social hidden-xs">
@@ -50,9 +50,9 @@
         <section class="mid_header">
           <div class="container">
             <div class="row">
-              <div class="col-sm-6 col-md-4">
+              <div class="col-sm-6 col-md-4 logo_EC">
                 <!--LOGO ESTAMOS CAPACITADOS-->
-                <figure class="logo" title="Estamos Capacitados">
+                <figure title="Home de Estamos Capacitados">
                   <a href="index.html">
                     <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
                   </a> 
@@ -133,18 +133,18 @@
         <div class="navigation container"> 
           <nav> <!--menu-->
             <ul class="nav nav-tabs">
-              <li role="presentation"><a href="#">Quiénes Somos</a></li>
-              <li role="presentation"><a href="#">Acerca de EC</a></li>
-              <li role="presentation"><a href="#">Casos de Éxito</a></li>
-              <li role="presentation"><a href="#">Mis Solicitudes</a></li>
-              <li role="presentation"><a href="#">Mis Trabajos</a></li>
+              <li title="Quiénes Somos" role="presentation"><a href="#">Quiénes Somos</a></li>
+              <li title="Acerca de Estamos Capacitados" role="presentation"><a href="#">Acerca de EC</a></li>
+              <li title="Casos de Éxito" role="presentation"><a href="#">Casos de Éxito</a></li>
+              <li title="Solicitudes de Servicio" role="presentation"><a href="#">Mis Solicitudes</a></li>
+              <li title="Historial de Trabajos" role="presentation"><a href="#">Mis Trabajos</a></li>
             </ul>
           </nav>
         </div>
       </header>
       
       <!--CUERPO-->
-      <section>
+      <section id="main-container">
         <!--BIENVENIDA-->
         <section class="welcome welcome_background">
           <div class="container">
@@ -158,7 +158,7 @@
               </div>
               <div class="col-sm-6 col-md-12">
                 <figure class="text-center img-responsive">
-                  <img src="img/LogoEC.png" class="" alt="">
+                  <img src="img/LogoEC.png" title="Estamos Capacitados" alt="Imagen Estamos Capacitados">
                 </figure>
               </div>
 
@@ -166,8 +166,8 @@
               <!--BARRA DE BUSQUEDA CENTRAL-->
                 <div class="welcome_search hidden-xs"> 
                   <form class="form_search">
-                    <input type="text" placeholder="Busca: Diseños, Traducciones, Programación">
-                    <button class="btn" href="#">Buscar</button>
+                    <input type="text" title="Buscar" placeholder="Busca: Diseños, Traducciones, Programación" maxlength="40" autocomplete="off" >
+                    <button type="button" title="buscar" class="btn btn-warning" href="#">Buscar</button>
                   </form>
                 </div>
               </div>
@@ -192,7 +192,7 @@
                   </div>
                   <div class="service_text">
                     <p>Más de 800 trabajos por semana</p>
-                    <a href="#">Ver Más</a>
+                    <a class="btn btn-link" href="#">Ver Más</a>
                   </div>
                 </div>
               </div>
@@ -203,7 +203,7 @@
                   </div>
                   <div class="service_text">
                     <p>Más de 1000 Personas en situación de discapacidad trabajan a traves de Estamos Capacitados</p>
-                    <a href="#">Ver Más</a>
+                    <a class="btn btn-link" href="#">Ver Más</a>
                   </div>
                 </div>
               </div>
@@ -214,7 +214,7 @@
                   </div>
                   <div class="service_text">
                     <p>Más de 20 instituciones asociadas a Estamos Capacitados</p>
-                    <a href="#">Ver Más</a>
+                    <a class="btn btn-link" href="#">Ver Más</a>
                   </div>
                 </div>
               </div>
@@ -225,7 +225,7 @@
                   </div>
                   <div class="service_text">
                     <p>Más de 100 Tipos de trabajos ofrecidos</p>
-                    <a href="#">Ver Más</a>
+                    <a class="btn btn-link" href="#">Ver Más</a>
                   </div>
                 </div>
               </div>
@@ -239,18 +239,16 @@
             <div class="row">
               <div class="col-sm-6 col-md-6">
                 <div class="success_box">
-                  <div class="success_title">
+                  <div class="">
                     <h3>Casos de Éxito</h3>
                   </div>
-                  <div class="success_employee_box">
+                  <div class="card">
                     <div>
                       <h4>Trabajador de la semana</h4>
                     </div>
-                    <section class="success_employee text-center">
-                      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhtAAAAJGMzOWJlNzZlLTUyNWQtNGZiNi1iMzA5LWFkZTI4NGM4ZjViMg.jpg" alt="Foto empleado del mes">
-                      <div class="success_employee_name">
-                        <label>Ignacio Céspedes C.</label>
-                      </div>
+                    <section class="card-image text-center employee_img">
+                      <img class="img-responsive img-thumbnail" src="https://goo.gl/U1eJTT" alt="Foto empleado del mes">
+                      <label class="card-title">Ignacio Céspedes C.</label>
                     </section>
                     <section class="success_employee_multimedia">
                       <div class="success_employee_video">
@@ -305,9 +303,9 @@
           </div>
         </section>
       </footer>
-
-      <!--JAVASCRIPTS-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      
+      <!--SCRIPTS-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </body>
   </html>
