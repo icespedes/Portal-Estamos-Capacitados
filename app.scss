@@ -250,6 +250,37 @@ header {
   }
 
   /*
+  <!----------MODAL LOGIN------------------>
+  */
+  .modal-content {
+    .modal-header {
+      img {
+        width: 15vw;
+      }
+      h2 {
+        margin: 0;
+      }
+    }
+    
+    .modal-body {
+      .login_box {
+        border-right: 1px solid $gray_color;
+
+        .form-group {
+          margin-bottom: 0px;
+        }
+
+        .recovery_pass {
+          font-size: 11px;
+          color: red;
+          margin-left: 70px; 
+        }
+      } 
+    }
+  }
+
+
+  /*
   <----------BARRA DE NAVEGACION---------->
   */
   .navigation {
@@ -267,6 +298,8 @@ header {
     }
   }
 }
+
+
 /*
 ==============CUERPO==============
 */
@@ -414,47 +447,14 @@ footer {
   }
 
 
-  .contact {
-    padding-top: 20px;
   /*
   <----------MENU NAVEGACION INFERIOR---------->
   */
-    .footer_menu {
-      display: inline-block;
-      text-align: center;
-
-      li {
-        list-style: none;
-        margin: 10px 0; 
-
-        a {
-          color: $white_color;
-        }
-      }
-    }
 
   /*
   <----------REDES SOCIALES INFERIOR---------->
   */
-    .foot_social {
-      display: inline-block;
-      float: right;
-      padding-top: 35px;
 
-      li {
-        font-size: 30px;
-        display: inline-block;
-        margin: 0 5px;
-        a {
-          color: $white_color !important;
-
-          &:hover {
-            color: $yellow_color !important;
-          }
-        }
-      }
-    }
-  }
 }
 
 /*
@@ -494,9 +494,15 @@ footer {
   } 
 }
 
-
-
-
+/*
+==============POPOVER==============
+*/
+.popover-title {
+    font-size: 14px;
+}
+.popover-content {
+    font-size: 12px;
+}
 
 
 /*

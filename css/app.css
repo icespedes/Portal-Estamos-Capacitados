@@ -43,6 +43,9 @@ header {
   <----------LOGO-SEARCH BAR-LOGIN---------->
   */
   /*
+  <!----------MODAL LOGIN------------------>
+  */
+  /*
   <----------BARRA DE NAVEGACION---------->
   */ }
   header .top_header {
@@ -195,6 +198,18 @@ header {
             margin-top: 20px; }
             header .mid_header .row .sesion_options ul .register a {
               font-size: 13px; }
+  header .modal-content .modal-header img {
+    width: 15vw; }
+  header .modal-content .modal-header h2 {
+    margin: 0; }
+  header .modal-content .modal-body .login_box {
+    border-right: 1px solid #dfdfdf; }
+    header .modal-content .modal-body .login_box .form-group {
+      margin-bottom: 0px; }
+    header .modal-content .modal-body .login_box .recovery_pass {
+      font-size: 11px;
+      color: red;
+      margin-left: 70px; }
   header .navigation {
     margin: auto; }
     header .navigation nav {
@@ -303,6 +318,12 @@ footer {
   background: black;
   /*
   <----------LOGOS PARTNERS---------->
+  */
+  /*
+  <----------MENU NAVEGACION INFERIOR---------->
+  */
+  /*
+  <----------REDES SOCIALES INFERIOR---------->
   */ }
   footer .partners {
     border-bottom: 1px solid #434343; }
@@ -324,34 +345,6 @@ footer {
         -ms-transform: scale(1.25);
         -o-transform: scale(1.25);
         transform: scale(1.25); }
-  footer .contact {
-    padding-top: 20px;
-    /*
-  <----------MENU NAVEGACION INFERIOR---------->
-  */
-    /*
-  <----------REDES SOCIALES INFERIOR---------->
-  */ }
-    footer .contact .footer_menu {
-      display: inline-block;
-      text-align: center; }
-      footer .contact .footer_menu li {
-        list-style: none;
-        margin: 10px 0; }
-        footer .contact .footer_menu li a {
-          color: #FFFFFF; }
-    footer .contact .foot_social {
-      display: inline-block;
-      float: right;
-      padding-top: 35px; }
-      footer .contact .foot_social li {
-        font-size: 30px;
-        display: inline-block;
-        margin: 0 5px; }
-        footer .contact .foot_social li a {
-          color: #FFFFFF !important; }
-          footer .contact .foot_social li a:hover {
-            color: #F7BF19 !important; }
 
 /*
 ==============REGISTRO==============
@@ -375,6 +368,15 @@ footer {
           right: 12px; }
       .register .row_register_box .register_box .register_btn_box {
         margin-top: 20px; }
+
+/*
+==============POPOVER==============
+*/
+.popover-title {
+  font-size: 14px; }
+
+.popover-content {
+  font-size: 12px; }
 
 /*
 ==============CARD==============

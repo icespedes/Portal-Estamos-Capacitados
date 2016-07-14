@@ -25,8 +25,8 @@
               <div class="col-sm-4 col-md-2 hidden-xs">
                 <div class="top_access">
                   <ul class="text-center">
-                    <li><a title="Aumentar Fuente" type="button" class="btn btn-warning"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
-                    <li><a title="Disminuir Fuente" class="btn btn-warning"><i class="fa fa-minus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Aumentar Fuente" type="button" class="btn btn-warning" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="Para una mejor accesibilidad, puedes aumentar el tamaño de la fuente"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Disminuir Fuente" class="btn btn-warning" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="Para una mejor accesibilidad, puedes disminuir el tamaño de la fuente"><i class="fa fa-minus-circle" aria-hidden="true"></i></a></li>
                     <li><a title="Accesibilidad" class="btn btn-warning"><i class="fa fa-wheelchair" aria-hidden="true"></i></a></li>
                   </ul>
                 </div>
@@ -50,8 +50,8 @@
         <section class="mid_header">
           <div class="container">
             <div class="row">
+              <!--LOGO ESTAMOS CAPACITADOS-->
               <div class="col-sm-6 col-md-4 logo_EC">
-                <!--LOGO ESTAMOS CAPACITADOS-->
                 <figure title="Home de Estamos Capacitados">
                   <a href="index.html">
                     <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
@@ -59,8 +59,8 @@
                 </figure>
               </div>
 
+              <!--BARRA DE BUSQUEDA HEADER-->
               <div class="col-sm-6 col-md-5 header_search_bar">
-                <!--BARRA DE BUSQUEDA HEADER-->
                 <form>
                   <input type="text" title="Buscar" placeholder="¿Qué estás buscando?" maxlength="40" autocomplete="off">
                   <button href="#" title="Buscar" class="btn">
@@ -68,45 +68,51 @@
                   </button>
                 </form>
               </div>
+
+              <!--OPCIONES DE LOGIN-->
               <div class="col-sm-6 col-md-3 sesion_options">
-                <!--OPCIONES DE LOGIN-->
                 <ul class="text-center">
                   <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a></li>
                   <li class="register"><span>o bien, </span><a href="registro.html" title="Registrarse">crea una cuenta</a></li>
                 </ul>
               </div>
             </div>
+
             <!--MODAL LOGIN-->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"　aria-hidden="true">
               <div class="modal-dialog" role="document">
-
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="loginModalLabel">Ingresar a Estamos Capacitados</h4>
+                    <figure class="text-center">
+                      <img src="img/logo EstamosCapacitados.png" alt="Estamos Capacitados">
+                    </figure>
+                    <h2 class="text-info" id="loginModalLabel">Inicia Sesión</h2>
                   </div>
 
                   <div class="modal-body">
                     <div class="row">
-                      <div class="col-sm-6">
-                        <form class="form-horizontal" role="form">
-                          <div class="form-group">
-                            <label for="txtRut" class="col-sm-2 control-label">
-                              Rut</label>
-                            <div class="col-sm-12">
-                              <input type="numeric" class="form-control" id="txtRut" placeholder="Sin puntos ni guión" required>
-                            </div>
+                      <div class="col-sm-7 login_box">
+                        <form class="form-horizontal" data-toggle="validator" role="form">
+                         <!--Rut-->
+                          <div class="form-group col-md-12 has-feedback">
+                            <label for="txtLoginRut" class="control-label">Rut</label>
+                            <input type="text" class="form-control" id="txtLoginRut" title="Rut sin puntos Ej: 12345678-5" pattern="\d{3,8}-[\d|kK]{1}" placeholder="12345678-5" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
                           </div>
-                          <div class="form-group">
-                            <label for="txtLoginPassword" class=" col-sm-3 control-label">
-                              Contraseña</label>
-                            <a href="#" class="col-sm-offset-1 col-sm-8 recovery_pass">Recuperar Contraseña</a>
-                           <div class="col-sm-12">
-                            <input type="password" class="form-control" id="txtLoginPassword" placeholder="Contraseña" required>
-                           </div>
+
+                          <!--Password-->
+                          <div class="form-group col-md-12 has-feedback">
+                            <label for="txtLoginPassword" class="control-label">Contraseña</label>
+                            <a href="#" class="recovery_pass">Recuperar Contraseña</a>
+                            <input type="password" class="form-control" id="txtLoginPassword" title="Contraseña" data-minlength="6" maxlength="10" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
                           </div>
+
                           <div class="form-group last">
                             <div class="col-sm-9">
                               <button type="submit" class="btn btn-success btn-sm">
@@ -117,8 +123,8 @@
                           </div>
                         </form>
                       </div>
-                      <div class="col-sm-6">
-                        <div><h3>¿No tienes una cuenta?</h3></div>
+                      <div class="col-sm-5">
+                        <div><h3 class="text-center">¿No tienes una cuenta?</h3></div>
                         <p>Puedes <a href="registro.html">registrarte</a> en Estamos Capacitados</p>
                       </div>
                     </div>
@@ -126,6 +132,7 @@
                 </div>
               </div>
             </div>
+
           </div> 
         </section>
 
@@ -149,6 +156,7 @@
         <section class="welcome welcome_background">
           <div class="container">
             <div class="row">
+              <!--TITULO BIENVENIDA-->
               <div class="col-sm-6 col-md-12">
                 <div class="welcome_title text-center"> <!--welcome-->
                   <h1>
@@ -156,14 +164,16 @@
                   </h1>
                 </div>
               </div>
+
+              <!--LOGO EC BIENVENIDA-->
               <div class="col-sm-6 col-md-12">
                 <figure class="text-center img-responsive">
                   <img src="img/LogoEC.png" title="Estamos Capacitados" alt="Imagen Estamos Capacitados">
                 </figure>
               </div>
 
-              <div class="col-sm-6 col-md-12">
               <!--BARRA DE BUSQUEDA CENTRAL-->
+              <div class="col-sm-6 col-md-12">
                 <div class="welcome_search hidden-xs"> 
                   <form class="form_search">
                     <input type="text" title="Buscar" placeholder="Busca: Diseños, Traducciones, Programación" maxlength="40" autocomplete="off" >
@@ -171,7 +181,8 @@
                   </form>
                 </div>
               </div>
-
+              
+              <!--SUBTITULO BIENVENIDA-->
               <div class="col-sm-6 col-md-12">
                 <h3 class="text-center">
                   Trabajos con ❤ realizados por PeSD
@@ -279,27 +290,38 @@
       <!--FOOTER-->
       <footer>
         <section class="container">
-          <!--PARTNERS-->
-          <div class="partners text-center"> 
-            <img src="img/logo_corfo.png" alt="Logo Corfo"> 
-            <img src="img/logo_mutual.png" alt="Logo Mutual">
-            <img src="img/logo_sofofa.png" alt="Logo Sofofa">
-            <img src="img/logo_angelhack.png" alt="Logo AngelHack">
-          </div>
-          <!--MENU FOOTER-->
-          <div class="contact">
-            <ul class="footer_menu">
-              <li><a href="#">Quiénes Somos</a></li>
-              <li><a href="#">Estadísticas</a></li>
-              <li><a href="#">Casos de Éxito</a></li>
-            </ul>
-            <!--REDES SOCIALES-->
-            <ul class="foot_social">
-              <li><a href="https://www.facebook.com/estamoscapacitados"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-              <li><a href="https://twitter.com/ECapacitados"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/company/estamos-capacitados"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.youtube.com/channel/UCX4uF1ROv24UQxJNgzH0x6g"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
-            </ul>
+          <div class="row">
+            <!--PARTNERS-->
+            <div class="col-sm-6 col-md-12">
+              <div class="partners text-center"> 
+                <img src="img/logo_corfo.png" alt="Logo Corfo"> 
+                <img src="img/logo_mutual.png" alt="Logo Mutual">
+                <img src="img/logo_sofofa.png" alt="Logo Sofofa">
+                <img src="img/logo_angelhack.png" alt="Logo AngelHack">
+              </div>
+            </div>
+
+            
+            <div class="col-sm-6 col-md-12">
+              <!--MENU FOOTER-->
+              <ul class="footer_menu">
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Estadísticas</a></li>
+                <li><a href="#">Casos de Éxito</a></li>
+              </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <!--REDES SOCIALES-->
+              <div class="col-sm-4 col-md-4">
+                <ul class="foot_social">
+                  <li><a href="https://www.facebook.com/estamoscapacitados"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                  <li><a href="https://twitter.com/ECapacitados"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/estamos-capacitados"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCX4uF1ROv24UQxJNgzH0x6g"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
       </footer>
@@ -307,6 +329,7 @@
       <!--SCRIPTS-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="js/index.js"></script>
       <script src="js/validator.min.js"></script>
     </body>
   </html>
