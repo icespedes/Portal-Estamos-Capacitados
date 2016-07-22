@@ -1,3 +1,8 @@
+$('#opUserPesd').on('click', function() {
+  $('#selectInstitution').toggle(this.checked);
+}).change();
+
+
 
 /*TOOLTIPS*/
 $(function () {

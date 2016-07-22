@@ -243,44 +243,30 @@
                     <div class="form-group col-md-12">
                       <label>Tipo de usuario a crear</label>
                       <div class="radio">
-                        <label>
+                        <label data-placement="right" data-toggle="popover" data-trigger="hover" data-content="Usuario que accede a Estamos Capacitados para consumir servicios brindados por PeSD.">
                           <input type="radio" name="typeUser" id="opUser" checked>
                           Usuario Consumidor
                         </label>
                       </div>
                       <div class="radio">
-                        <label>
+                        <label data-placement="right" data-toggle="popover" data-trigger="hover" data-content="Persona en Situación de Discapacidad, que ofrece sus servicios a través de Estamos Capacitados">
                           <input type="radio" name="typeUser" id="opUserPesd">
                           Usuario Publicador (PeSD)
                         </label>
                       </div>                  
                     </div>
-                  
-                    <!--Información de Usuarios-->
-                    <div class="col-md-12">
-                      <div class="panel panel-info">
-                        <div class="panel-heading" role="tab" id="headInfoUserEC">
-                          <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" href="#infoUserEC"
-                             aria-expanded="false" aria-controls="infoUserEC">
-                              Más información sobre tipos de usuario
-                            </a>
-                          </h4>
-                        </div>
-                        <div id="infoUserEC" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headInfoUserEC">
-                          <div class="panel-body">
-                            <p>
-                              <b>Usuario Consumidor: </b>
-                              Usuario que accede a Estamos Capacitados para consumir servicios brindados por PeSD.
-                            </p>
-                            <p>
-                              <b>Usuario Publicador (PeSD): </b>
-                              Persona en Situación de Discapacidad, que ofrece sus servicios a través de Estamos Capacitados.
-                            </p>
-                          </div>
-                        </div>
+
+                    <div id="selectInstitution" class="form-group col-md-12" hidden>
+                      <label>Seleccionar Institución Acreditadora</label>
+                      <div>
+                        <select  class="form-control">
+                          <option value="">Teletón</option>
+                          <option value="">Sofofa</option>
+                          <option value="">Senadis</option>
+                        </select>
                       </div>
                     </div>
+
                   </section>
 
                   <section class="col-md-12">
@@ -349,6 +335,7 @@
       <!--SCRIPTS-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="js/index.js"></script>
       <script src="js/validator.min.js"></script>
     </body>
   </html>
