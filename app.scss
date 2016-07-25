@@ -496,6 +496,42 @@ footer {
   } 
 }
 
+
+/*
+==============RESULTADO BUSQUEDA==============
+*/
+.searchPage {
+
+  header {
+    nav {
+      div.dropdown {
+        display: inline-block;
+      }
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .searchPageFilterBox {
+    margin: 20px 0;
+    ul {
+      padding-left: 0;
+      padding-top: 10px;
+      list-style: none;
+    }
+
+    .marginFilterBox {
+      margin: 1px 0;
+    }
+  }
+
+  .searchPageResultBox {
+    margin: 10px 0;
+  }
+}
+
+
 /*
 ==============POPOVER==============
 */
@@ -504,6 +540,38 @@ footer {
 }
 .popover-content {
     font-size: 12px;
+}
+
+
+
+/*
+==============STARTS RATING==============
+*/
+
+/* Rating Star Widgets Style */
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+}
+
+.rating-stars ul > li.star {
+  display:inline-block;
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size:1.5em; /* Change the size of the stars */
+  color:#ccc; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color:#FFCC36;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color:#FF912C;
 }
 
 

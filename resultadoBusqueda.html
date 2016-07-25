@@ -152,143 +152,223 @@
 
       <!--CUERPO-->
       <section id="main-container">
-        <section class="register">
+        <section class="searchPage">
           <div class="container">
-            <div class="row row_register_box">
-              <div class="col-sm-6 col-md-12 text-center">
-                <h2>¡Bienvenido a Estamos Capacitados!</h2>
-                <h4>Aquí encontraras miles de servicios, con transacciones seguras a precios convenientes.</h4>
-              </div>
-              <div class="col-sm-6 col-md-offset-2 col-md-8 card register_box">
-                <form data-toggle="validator" role="form">
-                  <div class="create_acount_title text-info">
-                    <h2>Crear Cuenta</h2>
+            <div class="row" style="min-height:1050px;">
+              <!--CABECERA RESULTADOS-->
+              <header class="col-sm-6 col-md-12">
+                <nav>
+                  <div class="pull-right">
+                    <b>Ordenar por: </b>
+                    <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Precio
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Fecha de entrega</a></li>
+                        <li><a href="#">Mejores Servicios</a></li>
+                      </ul>
+                    </div>
                   </div>
+                  <h1 class="text-info">
+                    Resultados de la Búsqueda <b>"digitador"</b>
+                  </h1>
+                </nav>
+              </header>
 
-                  <section class="col-md-12">
-                    <!--Nombres-->
-                    <div class="form-group col-md-6 has-feedback">
-                      <label for="txtName" class="control-label">Nombres</label>
-                      <input type="text" class="form-control" title="Ingrese ambos nombres" id="txtUserName" required>
-                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                      <div class="help-block with-errors"></div>
-                    </div>
-
-                    <!--Apellidos-->
-                    <div class="form-group col-md-6 has-feedback">
-                      <label for="txtLastName" class="control-label">Apellidos</label>
-                      <input type="text" class="form-control" title="Ingrese ambos apellidos" id="txtLastName" required>
-                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </section>
-
-                  <section class="col-md-12">
-                    <!--Rut-->
-                    <div class="form-group col-md-6 has-feedback">
-                      <label for="txtRut" class="control-label">Rut</label>
-                      <input type="text" class="form-control" id="txtRut" title="Rut sin puntos Ej: 12345678-5" pattern="\d{3,8}-[\d|kK]{1}" placeholder="12345678-5" required>
-                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                      <div class="help-block with-errors"></div>
-                    </div>
-
-                    <!--Sexo-->
-                    <div class="form-group col-md-6">
-                      <label for="opSex">Sexo</label>
-                      <select class="form-control" id="opSex">
-                        <option>Hombre</option>
-                        <option>Mujer</option>
-                      </select>
-                    </div>
-                  </section>
-
-                  <section class="col-md-12">
-                    <!--Email-->
-                    <div class="form-group col-md-6 has-feedback">
-                      <label for="txtEmail" class="control-label">Correo Electrónico</label>
-                      <input type="email" class="form-control" id="txtEmail" placeholder="ejemplo@ejemplo.cl" title="Correo Electrónico" required>
-                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                      <div class="help-block with-errors"></div>
-                    </div>
-
-                    <!--Confirmar Email-->
-                    <div class="form-group col-md-6 has-feedback">
-                      <label for="txtConfirmEmail" class="control-label">Confirmar Correo Electrónico</label>
-                      <input type="email" class="form-control" id="txtConfirmEmail" title="Confirmar Correo" data-match="#txtEmail" data-match-error="Correo no coincide" required>
-                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </section>
-
-                  <section class="col-md-12">
-                    <!--Password-->
-                    <div class="form-group col-md-6 has-feedback">
-                      <label for="txtPassword" class="control-label">Contraseña</label>
-                      <input type="password" class="form-control" id="txtPassword" title="Contraseña" data-minlength="6" maxlength="10" required>
-                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                      <div class="help-block with-errors">Mínimo 6 caracteres</div>
-                    </div>
-
-                    <!--Confirmar Password-->
-                    <div class="form-group col-md-6 has-feedback">
-                      <label for="txtConfirmPassword" class="control-label">Confirmar Contraseña</label>
-                      <input type="password" class="form-control" id="txtConfirmPassword" title="Confirmar Contraseña" data-match="#txtPassword" data-match-error="Contraseña no coincide" placeholder="Confirmar Contraseña" required>
-                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </section>
-
-                  <section class="col-md-12">
-                    <!--Tipo Usuario EC-->
-                    <div class="form-group col-md-12">
-                      <label>Tipo de usuario</label>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="typeUser" id="opUser" checked>
-                          Usuario Consumidor <i class="fa fa-question-circle" data-placement="top" data-toggle="popover" data-trigger="hover" data-content="Usuario que accede a Estamos Capacitados para consumir servicios brindados por PeSD." aria-hidden="true"></i>
-                        </label>
+              <aside class="col-sm-6 col-md-3 searchPageFilterBox">
+                <div class="bg-primary col-md-12">
+                  <h4 class="text-center">Filtrar Búsqueda</h4>
+                </div>
+                <!--FILTRO POR CATEGORÍA-->
+                <div class="bg-info col-md-12 marginFilterBox">
+                  <ul>
+                    <li><a href="">Todas las categorías</a> <span class="badge pull-right">42</span></li>
+                    <li><a href="">Traducción</a> <span class="badge pull-right">5</span></li>
+                    <li><a href="">Diseño de Logos</a> <span class="badge pull-right">13</span></li>
+                    <li><a href="">Contador</a> <span class="badge pull-right">8</span></li>
+                    <li><a href="">Programación</a> <span class="badge pull-right">3</span></li>
+                    <li><a href="">Profesor</a> <span class="badge pull-right">7</span></li>
+                  </ul>
+                </div>
+                <!--FILTRO POR PRECIO-->
+                <div class="bg-info col-md-12 marginFilterBox">
+                  <ul>
+                    <li><a href="">Hasta $5.000</a> <span class="badge pull-right">4</span></li>
+                    <li><a href="">$5.000 a $10.000</a> <span class="badge pull-right">7</span></li>
+                    <li><a href="">Más de $10.000</a> <span class="badge pull-right">9</span></li>
+                    <li>
+                      <form class="form-inline">
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="$ Mín">-
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="$ Máx">
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Filtrar</button>
+                      </form>
+                    </li>
+                  </ul>
+                </div>
+                <!--FILTRO POR FECHA ENTREGA-->
+                <div class="bg-info col-md-12 marginFilterBox">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      Hasta 24 Horas
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                      Hasta 3 días
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      Hasta una semana
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      Todos
+                    </label>
+                  </div>
+                </div>
+              </aside>
+              <section class="col-sm-6 col-md-9 searchPageResultBox">
+                <div class="col-sm-6 col-md-4">
+                  <div class="card">
+                    <!-- Rating Stars Box -->
+                    <section class='rating-widget'>
+                      <div class='rating-stars text-center'>
+                        <ul id='stars'>
+                          <li class='star' title='Pobre' data-value='1'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Suficiente' data-value='2'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Bueno' data-value='3'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Excelente' data-value='4'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Recomendado' data-value='5'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                        </ul>
                       </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="typeUser" id="opUserPesd">
-                          Usuario Publicador (PeSD) <i class="fa fa-question-circle" data-placement="top" data-toggle="popover" data-trigger="hover" data-content="Persona en Situación de Discapacidad, que ofrece sus servicios a través de Estamos Capacitados" aria-hidden="true"></i>
-                        </label>
-                      </div>                  
+                    </section>
+                    <a href="#" class="thumbnail">
+                      <img class="" src="https://goo.gl/5KBxvo" alt="...">
+                    </a>
+                    <div class="caption">
+                      <h4>Ezequiel Muñoz</h4>
+                      <p>Yo digitare los documentos que necesites, por un precio increible.</p>
+                      <p><a href="#" class="btn btn-success" role="button">Comprar</a></p>
                     </div>
+                  </div>
+                </div>
 
-                    <div id="selectInstitution" class="form-group col-md-12" hidden>
-                      <label>Institución Acreditadora <i class="fa fa-question-circle" data-placement="top" data-toggle="popover" data-trigger="hover" data-content="Para validar la información y poder asegurar el buen funcionamiento y exclusividad del portal, le pedimos que incluya aquella institución o fundación a la cual pertenece" aria-hidden="true"></i>
-                      </label>
-                      <div>
-                        <select  class="form-control">
-                          <option value="">Teletón</option>
-                          <option value="">Sofofa</option>
-                          <option value="">Senadis</option>
-                        </select>
+                <div class="col-sm-6 col-md-4">
+                  <div class="card">
+                    <!-- Rating Stars Box -->
+                    <section class='rating-widget'>
+                      <div class='rating-stars text-center'>
+                        <ul id='stars'>
+                          <li class='star' title='Pobre' data-value='1'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Suficiente' data-value='2'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Bueno' data-value='3'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Excelente' data-value='4'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Recomendado' data-value='5'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                        </ul>
                       </div>
+                    </section>
+                    <a href="#" class="thumbnail">
+                      <img src="https://goo.gl/AWjQf4" alt="...">
+                    </a>
+                    <div class="caption">
+                      <h4>Paola Gómez</h4>
+                      <p>Puedo digitar 200 palabras por minuto, desde un precio económico</p>
+                      <p><a href="#" class="btn btn-success" role="button">Comprar</a></p>
                     </div>
+                  </div>
+                </div>
 
-                  </section>
-
-                  <section class="col-md-12">
-                    <!--Terminos y Condiciones-->
-                    <div class="form-group col-md-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" data-error="Debes aceptar los Términos y Condiciones para completar el registro" required> He leído y acepto los <a href="#">Términos y condiciones</a>
-                        </label>
-                        <div class="help-block with-errors"></div>
+                <div class="col-sm-6 col-md-4">
+                  <div class="card">
+                    <!-- Rating Stars Box -->
+                    <section class='rating-widget'>
+                      <div class='rating-stars text-center'>
+                        <ul id='stars'>
+                          <li class='star' title='Pobre' data-value='1'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Suficiente' data-value='2'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Bueno' data-value='3'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Excelente' data-value='4'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Recomendado' data-value='5'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                        </ul>
                       </div>
+                    </section>
+                    <a href="#" class="thumbnail">
+                      <img src="https://goo.gl/vhxska" alt="...">
+                    </a>
+                    <div class="caption">
+                      <h4>Rodrigo Rojas</h4>
+                      <p>Yo puedo cumplir con tus necesidades de digitación, por un precio accesible y la mejor calidad</p>
+                      <p><a href="#" class="btn btn-success" role="button">Comprar</a></p>
                     </div>
+                  </div>
+                </div>
 
-                    <!--Boton Crear Usuario-->
-                    <div class="col-md-12 text-center register_btn_box">
-                      <button type="submit" class="btn btn-success">Crear Usuario</button>
-                      <button type="reset" class="btn btn-default">Cancelar</button>                    
-                    </div>
-                  </section>
-                </form>
-              </div>
+                <!--PAGINACIÓN-->
+                <div class="col-sm-6 col-md-12 text-center">
+                  <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                      <li class="disabled">
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </section>
             </div>
           </div>
         </section>
