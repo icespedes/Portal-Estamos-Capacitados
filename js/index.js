@@ -1,8 +1,10 @@
-$('#opUserPesd').on('click', function() {
-  $('#selectInstitution').toggle(this.checked);
-}).change();
+$('#opUserPesd').click(function() {
+	$('#selectInstitution').show();
+});
 
-
+$('#opUser').click(function() {
+	$('#selectInstitution').hide();
+});
 
 /*TOOLTIPS*/
 $(function () {

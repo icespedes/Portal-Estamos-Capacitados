@@ -177,7 +177,7 @@ header {
 
           input {
             font-weight: 700;
-            width: 30vw;
+            width: 26vw;
             min-width: 250px;
             background: transparent;
             padding-left: 15px;
@@ -254,6 +254,8 @@ header {
   */
   .modal-content {
     .modal-header {
+      padding-bottom: 0;
+      
       img {
         width: 15vw;
       }
