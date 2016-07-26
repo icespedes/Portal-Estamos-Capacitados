@@ -162,12 +162,12 @@
                     <b>Ordenar por: </b>
                     <div class="dropdown">
                       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Precio
+                        Mejores Servicios
                         <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Precio</a></li>
                         <li><a href="#">Fecha de entrega</a></li>
-                        <li><a href="#">Mejores Servicios</a></li>
                       </ul>
                     </div>
                   </div>
@@ -177,14 +177,16 @@
                 </nav>
               </header>
 
+              <!--PANEL DE FILTROS-->            
               <aside class="col-sm-6 col-md-3 searchPageFilterBox">
                 <div class="bg-primary col-md-12">
                   <h4 class="text-center">Filtrar Búsqueda</h4>
                 </div>
                 <!--FILTRO POR CATEGORÍA-->
                 <div class="bg-info col-md-12 marginFilterBox">
+                  <label>Categorías</label>
                   <ul>
-                    <li><a href="">Todas las categorías</a> <span class="badge pull-right">42</span></li>
+                    <li><a href="">Todas</a> <span class="badge pull-right">42</span></li>
                     <li><a href="">Traducción</a> <span class="badge pull-right">5</span></li>
                     <li><a href="">Diseño de Logos</a> <span class="badge pull-right">13</span></li>
                     <li><a href="">Contador</a> <span class="badge pull-right">8</span></li>
@@ -194,26 +196,40 @@
                 </div>
                 <!--FILTRO POR PRECIO-->
                 <div class="bg-info col-md-12 marginFilterBox">
+                  <label>Precio</label>
                   <ul>
                     <li><a href="">Hasta $5.000</a> <span class="badge pull-right">4</span></li>
                     <li><a href="">$5.000 a $10.000</a> <span class="badge pull-right">7</span></li>
                     <li><a href="">Más de $10.000</a> <span class="badge pull-right">9</span></li>
                     <li>
                       <form class="form-inline">
-                        <div class="form-group">
-                          <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                          <div class="input-group">
-                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="$ Mín">-
-                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="$ Máx">
-                          </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Filtrar</button>
+                        <fieldset>
+                          <ul>
+                            <li>
+                              <label for="txtFromPrice">
+                                <input type="text" id="txtFromPrice" class="form-control" placeholder="$ Mín">
+                              </label>
+                            </li>
+                            <li>
+                              <label for="txtToPrice">
+                                <span>&nbsp;-&nbsp;</span>
+                                <input type="text" id="txtToPrice" class="form-control" placeholder="$ Máx">
+                              </label>
+                            </li>
+                          </ul>
+                        </fieldset>
+                        <p>
+                          <button type="submit" class="btn btn-primary" title="Filtrar">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                          </button>
+                        </p>
                       </form>
                     </li>
                   </ul>
                 </div>
                 <!--FILTRO POR FECHA ENTREGA-->
                 <div class="bg-info col-md-12 marginFilterBox">
+                  <label>Tiempo de Entrega</label>
                   <div class="radio">
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
@@ -240,11 +256,13 @@
                   </div>
                 </div>
               </aside>
+
+              <!--RESULTADOS DE BUSQUEDA-->
               <section class="col-sm-6 col-md-9 searchPageResultBox">
                 <div class="col-sm-6 col-md-4">
-                  <div class="card">
+                  <div class="card searchPageCardBox">
                     <!-- Rating Stars Box -->
-                    <section class='rating-widget'>
+                    <section class='rating-widget hidden'>
                       <div class='rating-stars text-center'>
                         <ul id='stars'>
                           <li class='star' title='Pobre' data-value='1'>
@@ -265,21 +283,24 @@
                         </ul>
                       </div>
                     </section>
-                    <a href="#" class="thumbnail">
+                    <a href="#" class="thumbnail imgCardBox">
                       <img class="" src="https://goo.gl/5KBxvo" alt="...">
                     </a>
-                    <div class="caption">
+                    <div class="descriptionCardBox">
                       <h4>Ezequiel Muñoz</h4>
-                      <p>Yo digitare los documentos que necesites, por un precio increible.</p>
-                      <p><a href="#" class="btn btn-success" role="button">Comprar</a></p>
+                      <p class="text-left serviceDescription">Yo digitare los documentos que necesites, por un precio increible.</p>
+                      <p>
+                        <a href="#" class="btn btn-success" role="button" title="Ver Servicio">Ver</a>
+                        <b class="text-success">$<span>5.000</span>.-</b>
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-sm-6 col-md-4">
-                  <div class="card">
+                  <div class="card searchPageCardBox">
                     <!-- Rating Stars Box -->
-                    <section class='rating-widget'>
+                    <section class='rating-widget hidden'>
                       <div class='rating-stars text-center'>
                         <ul id='stars'>
                           <li class='star' title='Pobre' data-value='1'>
@@ -300,21 +321,24 @@
                         </ul>
                       </div>
                     </section>
-                    <a href="#" class="thumbnail">
+                    <a href="#" class="thumbnail imgCardBox">
                       <img src="https://goo.gl/AWjQf4" alt="...">
                     </a>
-                    <div class="caption">
+                    <div class="descriptionCardBox">
                       <h4>Paola Gómez</h4>
-                      <p>Puedo digitar 200 palabras por minuto, desde un precio económico</p>
-                      <p><a href="#" class="btn btn-success" role="button">Comprar</a></p>
+                      <p class="text-left serviceDescription">Puedo digitar 200 palabras por minuto, desde un precio económico</p>
+                      <p>
+                        <a href="#" class="btn btn-success" role="button" title="Ver Servicio">Ver</a>
+                        <b class="text-success">$<span>10.000</span>.-</b>
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-sm-6 col-md-4">
-                  <div class="card">
+                  <div class="card searchPageCardBox">
                     <!-- Rating Stars Box -->
-                    <section class='rating-widget'>
+                    <section class='rating-widget hidden'>
                       <div class='rating-stars text-center'>
                         <ul id='stars'>
                           <li class='star' title='Pobre' data-value='1'>
@@ -335,17 +359,58 @@
                         </ul>
                       </div>
                     </section>
-                    <a href="#" class="thumbnail">
+                    <a href="#" class="thumbnail imgCardBox">
                       <img src="https://goo.gl/vhxska" alt="...">
                     </a>
-                    <div class="caption">
+                    <div class="descriptionCardBox">
                       <h4>Rodrigo Rojas</h4>
-                      <p>Yo puedo cumplir con tus necesidades de digitación, por un precio accesible y la mejor calidad</p>
-                      <p><a href="#" class="btn btn-success" role="button">Comprar</a></p>
+                      <p class="text-left serviceDescription">Yo puedo cumplir con tus necesidades de digitación, por un precio accesible y la mejor calidad</p>
+                      <p>
+                        <a href="#" class="btn btn-success" role="button" title="Ver Servicio">Ver</a>
+                        <b class="text-success">$<span>5.000</span>.-</b>
+                      </p>
                     </div>
                   </div>
                 </div>
 
+                <div class="col-sm-6 col-md-4">
+                  <div class="card searchPageCardBox">
+                    <!-- Rating Stars Box -->
+                    <section class='rating-widget hidden'>
+                      <div class='rating-stars text-center'>
+                        <ul id='stars'>
+                          <li class='star' title='Pobre' data-value='1'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Suficiente' data-value='2'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Bueno' data-value='3'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Excelente' data-value='4'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                          <li class='star' title='Recomendado' data-value='5'>
+                            <i class='fa fa-star fa-fw'></i>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                    <a href="#" class="thumbnail imgCardBox">
+                      <img src="https://goo.gl/vhxska" alt="...">
+                    </a>
+                    <div class="descriptionCardBox">
+                      <h4>Rodrigo Rojas</h4>
+                      <p class="text-left serviceDescription">Yo puedo cumplir con tus necesidades de digitación, por un precio accesible y la mejor calidad</p>
+                      <p>
+                        <a href="#" class="btn btn-success" role="button" title="Ver Servicio">Ver</a>
+                        <b class="text-success">$<span>5.000</span>.-</b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
                 <!--PAGINACIÓN-->
                 <div class="col-sm-6 col-md-12 text-center">
                   <nav aria-label="Page navigation">

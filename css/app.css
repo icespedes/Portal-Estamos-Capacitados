@@ -384,13 +384,33 @@ footer {
   margin: 20px 0; }
   .searchPage .searchPageFilterBox ul {
     padding-left: 0;
-    padding-top: 10px;
     list-style: none; }
   .searchPage .searchPageFilterBox .marginFilterBox {
-    margin: 1px 0; }
+    margin: 1px 0;
+    padding: 10px; }
+    .searchPage .searchPageFilterBox .marginFilterBox ul li {
+      margin: 5px 0; }
+      .searchPage .searchPageFilterBox .marginFilterBox ul li fieldset {
+        display: inline-block; }
+        .searchPage .searchPageFilterBox .marginFilterBox ul li fieldset li {
+          display: inline-block; }
+          .searchPage .searchPageFilterBox .marginFilterBox ul li fieldset li input {
+            width: 89px;
+            margin: 0; }
+      .searchPage .searchPageFilterBox .marginFilterBox ul li p {
+        display: inline-block; }
 
 .searchPage .searchPageResultBox {
   margin: 10px 0; }
+  .searchPage .searchPageResultBox .searchPageCardBox {
+    padding: 15px; }
+    .searchPage .searchPageResultBox .searchPageCardBox .imgCardBox {
+      height: 225px; }
+    .searchPage .searchPageResultBox .searchPageCardBox .descriptionCardBox .serviceDescription {
+      min-height: 90px; }
+    .searchPage .searchPageResultBox .searchPageCardBox .descriptionCardBox b {
+      float: right;
+      font-size: 25px; }
 
 /*
 ==============POPOVER==============

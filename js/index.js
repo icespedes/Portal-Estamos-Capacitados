@@ -45,7 +45,17 @@ $(document).ready(function(){
     }
   });
 
+  /*RESULTADO DE BUSQUEDA - OCULTAR ESTRELLAS*/
+  $('.searchPageCardBox').on('mouseover', function(){
 
+  	$('.rating-widget').removeClass('hidden').animate(200);
+
+
+  }).on('mouseout', function(){
+
+  	$('.rating-widget').addClass('hidden');
+
+  });
 
 	/*******UTILIDADES BOOTSTRAP*******/
 	/*BOOTSTRAP TOOLTIPS*/
