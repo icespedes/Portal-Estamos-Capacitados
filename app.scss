@@ -3,6 +3,8 @@
 */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
+@import url(star-rating.min.css);
+@import url(theme.min.css);
 
 /*
 ==============VARIABLES==============
@@ -422,6 +424,7 @@ header {
     }
   }
 }
+
 /*
 ==============FOOTER==============
 */
@@ -460,7 +463,7 @@ footer {
 }
 
 /*
-==============REGISTRO==============
+==============PAGINA REGISTRO==============
 */
 .register {
   background: $background_section;
@@ -498,7 +501,7 @@ footer {
 
 
 /*
-==============RESULTADO BUSQUEDA==============
+==============PAGINA RESULTADO BUSQUEDA==============
 */
 .searchPage {
 
@@ -577,38 +580,6 @@ footer {
 }
 .popover-content {
     font-size: 12px;
-}
-
-
-
-/*
-==============STARTS RATING==============
-*/
-
-/* Rating Star Widgets Style */
-.rating-stars ul {
-  list-style-type:none;
-  padding:0;
-}
-
-.rating-stars ul > li.star {
-  display:inline-block;
-}
-
-/* Idle State of the stars */
-.rating-stars ul > li.star > i.fa {
-  font-size:1.5em; /* Change the size of the stars */
-  color:#ccc; /* Color on idle state */
-}
-
-/* Hover state of the stars */
-.rating-stars ul > li.star.hover > i.fa {
-  color:#FFCC36;
-}
-
-/* Selected state of the stars */
-.rating-stars ul > li.star.selected > i.fa {
-  color:#FF912C;
 }
 
 

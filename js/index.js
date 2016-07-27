@@ -9,53 +9,35 @@ $(document).ready(function(){
 		$('#selectInstitution').hide();
 	});
 
-	/*STARS RATING*/
-	  /* 1. Visualizing things on Hover - See next part for action on click */
-  $('#stars li').on('mouseover', function(){
-    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
-   
-    // Now highlight all the stars that's not after the current hovered star
-    $(this).parent().children('li.star').each(function(e){
-      if (e < onStar) {
-        $(this).addClass('hover');
-      }
-      else {
-        $(this).removeClass('hover');
-      }
-    });
-    
-  }).on('mouseout', function(){
-    $(this).parent().children('li.star').each(function(e){
-      $(this).removeClass('hover');
-    });
-  });
-  
-  
-  /* 2. Action to perform on click */
-  $('#stars li').on('click', function(){
-    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
-    var stars = $(this).parent().children('li.star');
-    
-    for (i = 0; i < stars.length; i++) {
-      $(stars[i]).removeClass('selected');
-    }
-    
-    for (i = 0; i < onStar; i++) {
-      $(stars[i]).addClass('selected');
-    }
-  });
 
   /*RESULTADO DE BUSQUEDA - OCULTAR ESTRELLAS*/
-  $('.searchPageCardBox').on('mouseover', function(){
+  //$('.searchPageCardBox').on('mouseover', function(){
 
-  	$('.rating-widget').removeClass('hidden').animate(200);
+  //	$('.rating-widget').removeClass('hidden').animate();
 
+  //}).on('mouseout', function(){
+  //	$('.rating-widget').addClass('hidden');
+  //});
 
-  }).on('mouseout', function(){
+  /*RATING HEART*/
+	$('.kv-ltr-theme-svg-alt').rating({
+	    hoverOnClear: false,
+	    theme: 'krajee-svg',       
+	    containerClass: 'is-heart',
+	    filledStar: '<span class="krajee-icon krajee-icon-heart"></span>',
+	    emptyStar: '<span class="krajee-icon krajee-icon-heart"></span>',
+	    defaultCaption: '{rating} hearts',
+	    displayOnly: true,
+	    starCaptions: function (rating) {
+	        return rating == 1 ? 'One heart' : rating + ' hearts';
+	    }
+	});
+  
+  //$('.kv-fa-heart').on(
+  //  	'change', function () {
+  //	       console.log('Rating selected: ' + $(this).val());
+  //        });
 
-  	$('.rating-widget').addClass('hidden');
-
-  });
 
 	/*******UTILIDADES BOOTSTRAP*******/
 	/*BOOTSTRAP TOOLTIPS*/
