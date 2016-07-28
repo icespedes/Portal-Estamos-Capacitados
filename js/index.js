@@ -19,19 +19,12 @@ $(document).ready(function(){
   //	$('.rating-widget').addClass('hidden');
   //});
 
-  /*RATING HEART*/
-	$('.kv-ltr-theme-svg-alt').rating({
-	    hoverOnClear: false,
-	    theme: 'krajee-svg',       
-	    containerClass: 'is-heart',
-	    filledStar: '<span class="krajee-icon krajee-icon-heart"></span>',
-	    emptyStar: '<span class="krajee-icon krajee-icon-heart"></span>',
-	    defaultCaption: '{rating} hearts',
-	    displayOnly: true,
-	    starCaptions: function (rating) {
-	        return rating == 1 ? 'One heart' : rating + ' hearts';
-	    }
-	});
+  /*RATING STAR*/
+    $('.kv-ltr-theme-svg-star').rating({
+        hoverOnClear: false,
+        theme: 'krajee-svg',
+        displayOnly: true
+    });
   
   //$('.kv-fa-heart').on(
   //  	'change', function () {
