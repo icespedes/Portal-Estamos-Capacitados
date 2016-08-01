@@ -33,6 +33,80 @@
   background-image: url("../img/Sky.jpg");
   background-size: cover; }
 
+.title {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #dfdfdf; }
+
+ul {
+  padding-left: 0;
+  list-style: none; }
+
+/*
+==============POPOVER==============
+*/
+.popover-title {
+  font-size: 14px; }
+
+.popover-content {
+  font-size: 12px; }
+
+/*
+==============CARD==============
+*/
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box; }
+
+.card span.card-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.card .card-image {
+  position: relative;
+  overflow: hidden; }
+
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1; }
+
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px; }
+
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box; }
+
+.card .card-content p {
+  margin: 0;
+  color: inherit; }
+
+.card .card-content span.card-title {
+  line-height: 48px; }
+
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase; }
+
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none; }
+
 /*
 ==============HEADER==============
 */
@@ -57,12 +131,10 @@ header {
       padding: 7px 0;
       width: 90%;
       margin: 0 auto; }
-      header .top_header .top_container .top_access ul {
-        padding-left: 0; }
-        header .top_header .top_container .top_access ul li {
-          display: inline-block; }
-          header .top_header .top_container .top_access ul li i {
-            font-size: 18px; }
+      header .top_header .top_container .top_access ul li {
+        display: inline-block; }
+        header .top_header .top_container .top_access ul li i {
+          font-size: 18px; }
       header .top_header .top_container .btn_publicar {
         font-weight: 700;
         width: 11em; }
@@ -70,7 +142,6 @@ header {
         padding-top: 2px; }
         header .top_header .top_container .top_social ul {
           font-size: 1.5em;
-          padding-left: 0;
           margin: 0; }
           header .top_header .top_container .top_social ul li {
             width: 1.7em;
@@ -173,33 +244,31 @@ header {
               color: #FFFFFF; }
       header .mid_header .row .sesion_options {
         padding: 20px 0 0 20px; }
-        header .mid_header .row .sesion_options ul {
-          list-style: none; }
-          header .mid_header .row .sesion_options ul a {
-            color: #007EE5; }
-          header .mid_header .row .sesion_options ul .login a {
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 700;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #007EE5;
-            -webkit-transition: all 0.3s ease;
-            /* Safari and Chrome */
-            -moz-transition: all 0.3s ease;
-            /* Firefox */
-            -ms-transition: all 0.3s ease;
-            /* IE 9 */
-            -o-transition: all 0.3s ease;
-            /* Opera */
-            transition: all 0.3s ease; }
-            header .mid_header .row .sesion_options ul .login a:hover {
-              color: #FFFFFF;
-              background: #007EE5; }
-          header .mid_header .row .sesion_options ul .register {
-            margin-top: 20px; }
-            header .mid_header .row .sesion_options ul .register a {
-              font-size: 13px; }
+        header .mid_header .row .sesion_options ul a {
+          color: #007EE5; }
+        header .mid_header .row .sesion_options ul .login a {
+          text-decoration: none;
+          font-size: 15px;
+          font-weight: 700;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #007EE5;
+          -webkit-transition: all 0.3s ease;
+          /* Safari and Chrome */
+          -moz-transition: all 0.3s ease;
+          /* Firefox */
+          -ms-transition: all 0.3s ease;
+          /* IE 9 */
+          -o-transition: all 0.3s ease;
+          /* Opera */
+          transition: all 0.3s ease; }
+          header .mid_header .row .sesion_options ul .login a:hover {
+            color: #FFFFFF;
+            background: #007EE5; }
+        header .mid_header .row .sesion_options ul .register {
+          margin-top: 20px; }
+          header .mid_header .row .sesion_options ul .register a {
+            font-size: 13px; }
   header .modal-content .modal-header {
     padding-bottom: 0; }
     header .modal-content .modal-header img {
@@ -361,11 +430,6 @@ footer {
     .register .row_register_box .register_box {
       background: #FFFFFF;
       padding: 20px; }
-      .register .row_register_box .register_box .create_acount_title {
-        margin-bottom: 30px; }
-        .register .row_register_box .register_box .create_acount_title h2 {
-          border-bottom: 1px solid #dfdfdf;
-          margin: 0; }
       .register .row_register_box .register_box .form-group {
         margin-bottom: 0px; }
         .register .row_register_box .register_box .form-group .form-control-feedback {
@@ -384,9 +448,6 @@ footer {
 
 .searchPage .searchPageFilterBox {
   margin: 20px 0; }
-  .searchPage .searchPageFilterBox ul {
-    padding-left: 0;
-    list-style: none; }
   .searchPage .searchPageFilterBox .marginFilterBox {
     margin: 1px 0;
     padding: 10px; }
@@ -418,26 +479,23 @@ footer {
     .searchPage .searchPageResultBox .searchPageCardBox:hover .hover-img {
       transform: scale(1.1); }
 
-/*
-==============EFECTO HOVER CON RATING SOBRE IMAGENES==============
-*/
-.hover-img,
-.hover-text {
+.searchPage .searchPageCardBox .hover-img,
+.searchPage .searchPageCardBox .hover-text {
   -webkit-transition: all 0.4s ease-in-out; }
 
-.hover-outter {
+.searchPage .searchPageCardBox .hover-outter {
   width: 215px;
   height: 200px;
   margin: 3px;
   position: relative;
   overflow: hidden; }
 
-.imgCardBox .hover-img {
+.searchPage .searchPageCardBox .imgCardBox .hover-img {
   background: url("https://goo.gl/vhxska");
   background-size: cover;
   height: 225px; }
 
-.imgCardBox .hover-text {
+.searchPage .searchPageCardBox .imgCardBox .hover-text {
   position: absolute;
   bottom: 0;
   transform: translateY(100%);
@@ -447,71 +505,17 @@ footer {
   padding: 3px 5px; }
 
 /*
-==============POPOVER==============
+==============PAGINA DETALLE SERVICIO==============
 */
-.popover-title {
-  font-size: 14px; }
+.serviceDetail .padding-card {
+  padding: 20px; }
 
-.popover-content {
-  font-size: 12px; }
+.serviceDetail figure img {
+  width: 200px; }
 
-/*
-==============CARD==============
-*/
-.card {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-
-.card {
-  margin-top: 10px;
-  box-sizing: border-box;
-  border-radius: 2px;
-  background-clip: padding-box; }
-
-.card span.card-title {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 300;
-  text-transform: uppercase; }
-
-.card .card-image {
-  position: relative;
-  overflow: hidden; }
-
-.card .card-image img {
-  border-radius: 2px 2px 0 0;
-  background-clip: padding-box;
-  position: relative;
-  z-index: -1; }
-
-.card .card-image span.card-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 16px; }
-
-.card .card-content {
-  padding: 16px;
-  border-radius: 0 0 2px 2px;
-  background-clip: padding-box;
-  box-sizing: border-box; }
-
-.card .card-content p {
+.serviceDetail .details h2 {
   margin: 0;
-  color: inherit; }
+  padding-bottom: 20px; }
 
-.card .card-content span.card-title {
-  line-height: 48px; }
-
-.card .card-action {
-  border-top: 1px solid rgba(160, 160, 160, 0.2);
-  padding: 16px; }
-
-.card .card-action a {
-  color: #ffab40;
-  margin-right: 16px;
-  transition: color 0.3s ease;
-  text-transform: uppercase; }
-
-.card .card-action a:hover {
-  color: #ffd8a6;
-  text-decoration: none; }
+.serviceDetail .details .paddingCarousel {
+  padding: 10px; }

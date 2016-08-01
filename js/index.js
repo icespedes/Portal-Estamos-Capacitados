@@ -9,16 +9,6 @@ $(document).ready(function(){
 		$('#selectInstitution').hide();
 	});
 
-
-  /*RESULTADO DE BUSQUEDA - OCULTAR ESTRELLAS*/
-  //$('.searchPageCardBox').on('mouseover', function(){
-
-  //	$('.rating-widget').removeClass('hidden').animate();
-
-  //}).on('mouseout', function(){
-  //	$('.rating-widget').addClass('hidden');
-  //});
-
   /*RATING STAR*/
     $('.kv-ltr-theme-svg-star').rating({
         hoverOnClear: false,
@@ -33,6 +23,7 @@ $(document).ready(function(){
 
 
 	/*******UTILIDADES BOOTSTRAP*******/
+	
 	/*BOOTSTRAP TOOLTIPS*/
 	$(function () {
 	  $('[data-toggle="tooltip"]').tooltip()

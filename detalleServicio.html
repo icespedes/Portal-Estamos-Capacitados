@@ -1,0 +1,455 @@
+  <!DOCTYPE html>
+  <html lang="es">
+    <head>
+      <!--CSS-->
+      <link href="css/app.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+      <!--Browser Config-->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!--Titulo e Icon-->
+      <title>Estamos Capacitados</title>
+      <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    </head> 
+
+    <body>
+      <!--HEADER-->
+      <header> 
+        <section class="top_header">
+          <!--TOP HEADER-->
+          <div class="top_container">
+            <div class="row">
+              <!--BOTONES DE ACCESIBILIDAD-->
+              <div class="col-sm-4 col-md-2 hidden-xs">
+                <div class="top_access">
+                  <ul class="text-center">
+                    <li><a title="Aumentar Fuente" type="button" class="btn btn-warning" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="Para una mejor accesibilidad, puedes aumentar el tamaño de la fuente"><i class="fa fa-plus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Disminuir Fuente" class="btn btn-warning" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="Para una mejor accesibilidad, puedes disminuir el tamaño de la fuente"><i class="fa fa-minus-circle" aria-hidden="true"></i></a></li>
+                    <li><a title="Accesibilidad" class="btn btn-warning"><i class="fa fa-wheelchair" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!--BOTONES PUBLICAR-->
+              <div class="col-sm-4 col-md-8">
+                <div class="text-right">
+                  <button type="button" class="btn btn-success btn_publicar" title="Publicar Oferta" href="#">Publicar</button>
+                </div>
+              </div>
+              <!--REDES SOCIALES-->
+              <div class="col-sm-4 col-md-2 top_social hidden-xs">
+                <ul class="text-center">
+                  <li class="facebook"><a target="_blank" href="https://www.facebook.com/estamoscapacitados" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></i></a></li>
+                  <li class="twitter"><a target="_blank" href="https://twitter.com/ECapacitados" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/estamos-capacitados" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mid_header">
+          <div class="container">
+            <div class="row">
+              <!--LOGO ESTAMOS CAPACITADOS-->
+              <div class="col-sm-6 col-md-4 logo_EC">
+                <figure title="Home de Estamos Capacitados">
+                  <a href="index.html">
+                    <img src="img/logo EstamosCapacitados.png" class="img-responsive" alt="EstamosCapacitados Logo">
+                  </a> 
+                </figure>
+              </div>
+
+              <!--BARRA DE BUSQUEDA HEADER-->
+              <div class="col-sm-6 col-md-5 header_search_bar">
+                <form action="resultadoBusqueda.html">
+                  <input type="text" title="Buscar" placeholder="¿Qué estás buscando?" maxlength="40" autocomplete="off">
+                  <button type="submit" title="Buscar" class="btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+
+              <!--OPCIONES DE LOGIN-->
+              <div class="col-sm-6 col-md-3 sesion_options">
+                <ul class="text-center">
+                  <li class="login"><a href="" title="¿Tienes Cuenta? Entonces Inicia Sesión" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a></li>
+                  <li class="register"><span>o bien, </span><a href="registro.html" title="Registrarse">crea una cuenta</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!--MODAL LOGIN-->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"　aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <figure class="text-center">
+                      <img src="img/logo EstamosCapacitados.png" alt="Estamos Capacitados">
+                    </figure>
+                    <h2 class="text-info" id="loginModalLabel">Inicia Sesión</h2>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-sm-7 login_box">
+                        <form class="form-horizontal" data-toggle="validator" role="form">
+                         <!--Rut-->
+                          <div class="form-group col-md-12 has-feedback">
+                            <label for="txtLoginRut" class="control-label">Rut</label>
+                            <input type="text" class="form-control" id="txtLoginRut" title="Rut sin puntos Ej: 12345678-5" pattern="\d{3,8}-[\d|kK]{1}" placeholder="12345678-5" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                          </div>
+
+                          <!--Password-->
+                          <div class="form-group col-md-12 has-feedback">
+                            <label for="txtLoginPassword" class="control-label">Contraseña</label>
+                            <a href="#" class="recovery_pass">Recuperar Contraseña</a>
+                            <input type="password" class="form-control" id="txtLoginPassword" title="Contraseña" data-minlength="6" maxlength="10" required>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="help-block with-errors"></div>
+                          </div>
+
+                          <!--botones login-->
+                          <div class="form-group last">
+                            <div class="col-sm-9">
+                              <button type="submit" class="btn btn-success btn-sm">
+                                Entrar</button>
+                              <button type="reset" class="btn btn-default btn-sm">
+                                Borrar</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <!--registro login-->
+                      <div class="col-sm-5">
+                        <div><h3 class="text-center">¿No tienes una cuenta?</h3></div>
+                        <p>Puedes <a href="registro.html">registrarte</a> en Estamos Capacitados</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> 
+        </section>
+
+        <!--PESTAÑAS DE NAVEGACION-->
+        <div class="navigation container"> 
+          <nav> <!--menu-->
+            <ul class="nav nav-tabs">
+              <li title="Quiénes Somos" role="presentation"><a href="#">Quiénes Somos</a></li>
+              <li title="Acerca de Estamos Capacitados" role="presentation"><a href="#">Acerca de EC</a></li>
+              <li title="Casos de Éxito" role="presentation"><a href="#">Casos de Éxito</a></li>
+              <li title="Solicitudes de Servicio" role="presentation"><a href="#">Mis Solicitudes</a></li>
+              <li title="Historial de Trabajos" role="presentation"><a href="#">Mis Trabajos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!--CUERPO-->
+      <section id="main-container">
+        <section class="serviceDetail">
+          <div class="container">
+            <div class="row" style="min-height:1050px;">
+
+              <!-- TITULO HEADER -->
+              <div class="text-info title">
+                <h2>Detalle del Servicio</h2>
+              </div>
+
+              <!-- TARJETA PLANES -->
+              <section class="col-sm-6 col-md-5 plans">
+                <div class="card padding-card">
+                  <div class="panel-group" id="planPanel" role="tablist" aria-multiselectable="true">
+
+                    <!-- PLAN BÁSICO -->
+                    <div class="panel panel-info">
+                      <!-- CABECERA PLAN -->
+                      <div class="panel-heading" role="tab" id="basicPlanDetail">
+                        <h2 class="panel-title">
+                          <span class="caret"></span>
+                          <a role="button" data-toggle="collapse" data-parent="#planPanel" href="#basicPlan" aria-expanded="true" aria-controls="basicPlan">
+                            <b>Básico</b>
+                          </a>
+                          <b class="text-success pull-right">$<span>5.000</span>.-</b>
+                        </h2>
+                      </div>
+                      <!-- PLAN BASICO -->
+                      <div id="basicPlan" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="basicPlanDetail">
+                        <div class="panel-body">
+                          <!-- ENTREGA Y REPETICIONES -->
+                          <div>
+                            <ul>
+                              <li>
+                                <p class="text-success">
+                                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                  <b> Tiempo de Entrega: <span>4 días</span></b></p>
+                              </li>
+                              <li>
+                                <p class="text-success">
+                                  <i class="fa fa-repeat" aria-hidden="true"></i>
+                                  <b> Cantidad de Repeticiones: <span>1</span></b>
+                                </p>
+                              </li>
+                            </ul>   
+                          </div>
+                          <br>
+                          <!-- DETALLE -->
+                          <div>
+                            <label>Detalle</label>
+                            <p id="basicServiceDescription" class="text-justify">
+                              Morbi nec lacus vitae lectus bibendum molestie non ut odio. Aenean non lobortis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium felis et ex pellentesque, aliquam laoreet risus ultrices
+                            </p>
+                            <br>
+                            <label>Carácteristicas Clave</label>
+                            <ul>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Rápido</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Calidad</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Color</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Tamaño Normal</li>
+                            </ul>
+                          </div>
+
+                          <!-- BOTON COMPRAR SERVICIO -->
+                          <div class="text-center">
+                            <button class="btn btn-success btn-lg"> Solicitar Servicio</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- PLAN MEDIO -->
+                    <div class="panel panel-info">
+                      <div class="panel-heading" role="tab" id="mediumPlanDetail">
+                        <h2 class="panel-title">
+                          <span class="caret"></span>
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#planPanel" href="#mediumPlan" aria-expanded="false" aria-controls="mediumPlan">
+                            <b>Medio</b>
+                          </a>
+                          <b class="text-success pull-right">$<span>10.000</span>.-</b>
+                        </h2>
+                      </div>
+                      <div id="mediumPlan" class="panel-collapse collapse" role="tabpanel" aria-labelledby="mediumPlanDetail">
+                        <div class="panel-body">
+                          <!-- ENTREGA Y REPETICIONES -->
+                          <div>
+                            <ul>
+                              <li>
+                                <p class="text-success">
+                                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                  <b> Tiempo de Entrega: <span>4 días</span></b></p>
+                              </li>
+                              <li>
+                                <p class="text-success">
+                                  <i class="fa fa-repeat" aria-hidden="true"></i>
+                                  <b> Cantidad de Repeticiones: <span>1</span></b>
+                                </p>
+                              </li>
+                            </ul>   
+                          </div>
+                          <!-- DETALLE -->
+                          <div>
+                            <label>Detalle</label>
+                            <p id="basicServiceDescription" class="text-justify">
+                              Morbi nec lacus vitae lectus bibendum molestie non ut odio. Aenean non lobortis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium felis et ex pellentesque, aliquam laoreet risus ultrices
+                            </p>
+                            <label>Carácteristicas Clave</label>
+                            <ul>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Rápido</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Calidad</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Color</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Tamaño Normal</li>
+                            </ul>
+                          </div>
+
+                          <!-- BOTON COMPRAR SERVICIO -->
+                          <div class="text-center">
+                            <button class="btn btn-success btn-lg"> Solicitar Servicio</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- PLAN AVANZADO -->
+                    <div class="panel panel-info">
+                      <div class="panel-heading" role="tab" id="advancePlanDetail">
+                        <h2 class="panel-title">
+                          <span class="caret"></span>
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#planPanel" href="#advancePlan" aria-expanded="false" aria-controls="advancePlan">
+                            <b>Avanzado</b>
+                          </a>
+                          <b class="text-success pull-right">$<span>15.000</span>.-</b>
+                        </h2>
+                      </div>
+                      <div id="advancePlan" class="panel-collapse collapse" role="tabpanel" aria-labelledby="advancePlanDetail">
+                        <div class="panel-body">
+                          <!-- ENTREGA Y REPETICIONES -->
+                          <div>
+                            <ul>
+                              <li>
+                                <p class="text-success">
+                                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                  <b> Tiempo de Entrega: <span>4 días</span></b></p>
+                              </li>
+                              <li>
+                                <p class="text-success">
+                                  <i class="fa fa-repeat" aria-hidden="true"></i>
+                                  <b> Cantidad de Repeticiones: <span>1</span></b>
+                                </p>
+                              </li>
+                            </ul>   
+                          </div>
+                          <!-- DETALLE -->
+                          <div>
+                            <label>Detalle</label>
+                            <p id="basicServiceDescription" class="text-justify">
+                              Morbi nec lacus vitae lectus bibendum molestie non ut odio. Aenean non lobortis orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium felis et ex pellentesque, aliquam laoreet risus ultrices
+                            </p>
+                            <label>Carácteristicas Clave</label>
+                            <ul>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Rápido</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Calidad</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Color</li>
+                              <li><i class="fa fa-check" aria-hidden="true"></i> Tamaño Normal</li>
+                            </ul>
+                          </div>
+
+                          <!-- BOTON COMPRAR SERVICIO -->
+                          <div class="text-center">
+                            <button class="btn btn-success btn-lg"> Solicitar Servicio</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel panel-info">
+                    <div class="panel-body">
+                      <figure class="text-center">
+                        <img src="https://goo.gl/vhxska" alt="..." class="img-circle">
+                      </figure>
+                      <div class="text-center">
+                        <h3>Rodrigo Rojas</h3>
+                        <p class="text-muted">
+                        Rango
+                        </p>
+                      </div>
+                    </div>                      
+                  </div>
+                </div>
+              </section>
+
+              <!-- TARJETA DETALLE -->
+              <section class="col-sm-6 col-md-7 details">
+                <div class="card padding-card">
+
+                  <!-- TITULO SERVICIO -->
+                  <section class="text-success text-center">
+                    <h2>"Yo digitare los documentos que necesites, por un precio increible."</h2>
+                    <div class="hover-text text-center">
+                      <!--STARS RATING-->
+                      <input id="" name="" class="kv-ltr-theme-svg-star rating-loading" value="1" dir="ltr" data-size="xs">
+                    </div>
+                  </section>
+
+                  <!-- CARRUSEL -->
+                  <section>
+                    <div class="panel panel-info paddingCarousel">
+                      <div id="carouselServiceDetail" class="carousel slide" data-ride="carousel">
+                        <!-- INDICADORES SLIDE -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselServiceDetail" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselServiceDetail" data-slide-to="1"></li>
+                          <li data-target="#carouselServiceDetail" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- CONTENIDO POR SLIDE -->
+                        <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                            <img src="https://hd.unsplash.com/photo-1446102892025-3900145fd2a7" alt="...">
+                          </div>
+                          <div class="item">
+                            <img src="https://hd.unsplash.com/photo-1441015401724-70d16b783f5c" alt="...">
+                          </div>
+                          <div class="item">
+                            <img src="https://hd.unsplash.com/photo-1426024025799-8cf58f5df5a4" alt="...">
+                          </div>
+                        </div>
+
+                        <!-- CONTROLES -->
+                        <a class="left carousel-control" href="#carouselServiceDetail" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="right carousel-control" href="#carouselServiceDetail" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Siguiente</span>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+                </div>        
+              </section>        
+
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!--FOOTER-->
+      <footer>
+        <section class="container">
+          <div class="row">
+            <!--PARTNERS-->
+            <div class="col-sm-6 col-md-12">
+              <div class="partners text-center"> 
+                <img src="img/logo_corfo.png" alt="Logo Corfo"> 
+                <img src="img/logo_mutual.png" alt="Logo Mutual">
+                <img src="img/logo_sofofa.png" alt="Logo Sofofa">
+                <img src="img/logo_angelhack.png" alt="Logo AngelHack">
+              </div>
+            </div>
+
+            
+            <div class="col-sm-6 col-md-12">
+              <!--MENU FOOTER-->
+              <ul class="footer_menu">
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Estadísticas</a></li>
+                <li><a href="#">Casos de Éxito</a></li>
+              </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-12">
+              <!--REDES SOCIALES-->
+              <div class="col-sm-4 col-md-4">
+                <ul class="foot_social">
+                  <li><a href="https://www.facebook.com/estamoscapacitados"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                  <li><a href="https://twitter.com/ECapacitados"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/estamos-capacitados"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCX4uF1ROv24UQxJNgzH0x6g"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+
+      <!--SCRIPTS-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="js/index.js"></script>
+      <script src="js/validator.min.js"></script>
+      <script src="js/star-rating.min.js"></script>
+      <script src="js/theme.min.js"></script>
+    </body>
+  </html>
