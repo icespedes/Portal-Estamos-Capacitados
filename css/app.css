@@ -507,15 +507,25 @@ footer {
 /*
 ==============PAGINA DETALLE SERVICIO==============
 */
-.serviceDetail .padding-card {
-  padding: 20px; }
+.service_detail .padding-card {
+  padding: 20px;
+  margin-bottom: 40px; }
 
-.serviceDetail figure img {
+.service_detail figure img {
   width: 200px; }
 
-.serviceDetail .details h2 {
+.service_detail .user_info .panel-info .panel-heading {
+  padding: 5px; }
+
+.service_detail .user_info .panel-info .panel_padding {
+  padding: 5px; }
+  .service_detail .user_info .panel-info .panel_padding .krajee-icon {
+    width: 20px;
+    height: 20px; }
+
+.service_detail .details h2 {
   margin: 0;
   padding-bottom: 20px; }
 
-.serviceDetail .details .paddingCarousel {
+.service_detail .details .padding_carousel {
   padding: 10px; }

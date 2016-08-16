@@ -669,14 +669,31 @@ footer {
 /*
 ==============PAGINA DETALLE SERVICIO==============
 */
-.serviceDetail{
+.service_detail{
   .padding-card { 
     padding: 20px;
+    margin-bottom: 40px;
   }
 
   figure {
     img {
       width: 200px;
+    }
+  }
+
+  .user_info {
+    .panel-info {
+      .panel-heading {
+        padding: 5px;
+      }
+      .panel_padding {
+        padding: 5px;
+
+        .krajee-icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
   }
   
@@ -685,7 +702,8 @@ footer {
       margin: 0;
       padding-bottom: 20px;
     }
-    .paddingCarousel {
+
+    .padding_carousel {
       padding: 10px;
     }
   }
