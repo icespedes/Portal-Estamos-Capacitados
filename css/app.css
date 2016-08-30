@@ -202,7 +202,10 @@ header {
     background: #f9f9f9;
     border-bottom: 1px solid #dfdfdf; }
     header .mid_header .row {
-      margin: 10px 0; }
+      margin: 10px 0;
+      /*
+      ==============LOGIN USUARIO LOGEADO==============
+      */ }
       header .mid_header .row img {
         max-width: 300px; }
       header .mid_header .row .header_search_bar {
@@ -269,6 +272,25 @@ header {
           margin-top: 20px; }
           header .mid_header .row .sesion_options ul .register a {
             font-size: 13px; }
+      header .mid_header .row .sesion_profile {
+        padding: 20px 0 0 20px; }
+        header .mid_header .row .sesion_profile .navbar-login {
+          width: 305px;
+          padding: 10px;
+          padding-bottom: 0px; }
+        header .mid_header .row .sesion_profile .navbar-login-session {
+          padding: 10px;
+          padding-bottom: 0px;
+          padding-top: 0px; }
+        header .mid_header .row .sesion_profile .navbar-footer {
+          background-color: #DDD; }
+        header .mid_header .row .sesion_profile .navbar-footer-content {
+          padding: 15px 15px 15px 15px; }
+        header .mid_header .row .sesion_profile .dropdown-menu {
+          padding: 0px;
+          overflow: hidden; }
+        header .mid_header .row .sesion_profile .icon-size {
+          font-size: 87px; }
   header .modal-content .modal-header {
     padding-bottom: 0; }
     header .modal-content .modal-header img {
@@ -529,3 +551,15 @@ footer {
 
 .service_detail .details .padding_carousel {
   padding: 10px; }
+
+.service_detail .details .comments .media-list {
+  padding: 10px; }
+  .service_detail .details .comments .media-list li {
+    margin: 0.1px;
+    padding: 10px;
+    border: 1px solid #dfdfdf; }
+    .service_detail .details .comments .media-list li .media-body {
+      font-size: 13px; }
+
+.service_detail .details .comments img {
+  border-radius: 50%; }

@@ -322,6 +322,42 @@ header {
           }
         }
       }
+
+      /*
+      ==============LOGIN USUARIO LOGEADO==============
+      */  
+      .sesion_profile
+      {
+        padding: 20px 0 0 20px;
+        .navbar-login
+        {
+            width: 305px;
+            padding: 10px;
+            padding-bottom: 0px;
+        }
+
+        .navbar-login-session
+        {
+            padding: 10px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+
+        }
+        .navbar-footer 
+        {
+            background-color:#DDD;
+        }
+        .navbar-footer-content { padding:15px 15px 15px 15px; }
+        .dropdown-menu {
+        padding: 0px;
+        overflow: hidden;
+        }
+
+        .icon-size
+        {
+            font-size: 87px;
+        }
+      }
     }
   }
 
@@ -706,5 +742,25 @@ footer {
     .padding_carousel {
       padding: 10px;
     }
+
+    .comments {
+      .media-list {
+        padding: 10px;
+        li {
+          margin: 0.1px;
+          padding: 10px;
+          border: 1px solid $gray_color;
+
+          .media-body{
+            font-size: 13px;
+          }
+        }
+      }
+      img {
+        border-radius: 50%;
+      }
+    }
+
   }
 }
+
