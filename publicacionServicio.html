@@ -18,12 +18,11 @@
     <body>
       <!--HEADER-->
       <header> 
+      <!--TOP HEADER-->
         <section class="top_header">
-          <!--TOP HEADER-->
           <div class="top_container">
             <div class="row">
               <!--BOTONES DE ACCESIBILIDAD-->
-              <!--
               <div class="col-sm-4 col-md-2 hidden-xs">
                 <div class="top_access">
                   <ul class="text-center">
@@ -32,14 +31,11 @@
                     <li><a title="Accesibilidad" class="btn btn-warning"><i class="fa fa-wheelchair" aria-hidden="true"></i></a></li>
                   </ul>
                 </div>
-              </div>-->
-    
+              </div>
               <!--BOTONES PUBLICAR-->
-              <div class="col-sm-4 col-md-offset-2 col-md-8">
+              <div class="col-sm-4 col-md-8">
                 <div class="text-right">
-                  <form action="publicacionServicio.html">
-                    <button type="submit" class="btn btn-success btn_publicar" title="Publicar Oferta">Publicar</button>
-                  </form>
+                  <button type="button" class="btn btn-success btn_publicar" title="Publicar Oferta" href="#">Publicar</button>
                 </div>
               </div>
               <!--REDES SOCIALES-->
@@ -158,138 +154,41 @@
           </nav>
         </div>
       </header>
-      
+
       <!--CUERPO-->
       <section id="main-container">
-        <!--BIENVENIDA-->
-        <section class="welcome welcome_background">
+        <section class="">
           <div class="container">
             <div class="row">
-              <!--TITULO BIENVENIDA-->
-              <div class="col-sm-6 col-md-12">
-                <div class="welcome_title text-center"> <!--welcome-->
-                  <h1>
-                    ¿Necesitas un servicio? <br>Encuéntralo en
-                  </h1>
-                </div>
+              <div class="col-sm-6 col-md-12 text-center">
+                <h2>¿Eres realmente bueno haciendo algo? y... ¿te gustaría ganar dinero en eso?</h2>
+                <h4>Pública y empieza a prestar servicios a través de Estamos Capacitados.</h4>
               </div>
+              <div class="col-sm-6 col-md-12 card">
+                <form data-toggle="validator">
+                  <section class="col-md-12 publication_box">
+                    <section class="col-md-6">
+                      <!--Nombre Servicio-->
+                      <div class="form-group col-md-12">
+                        <label for="" class="control-label">Nombres del servicio</label>
+                        <input type="text" class="form-control" id="" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Descripcion del servicio -->
+                      <div class="form-group col-md-12">
+                        <label class="control-label">Descripción del servicio</label>
+                        <textarea id="service_description" class="form-control" rows="5" maxlength="300"></textarea>
+                        <h6 class="pull-right" id="count_message"></h6>
+                      </div>
+                    </section>
 
-              <!--LOGO EC BIENVENIDA-->
-              <div class="col-sm-6 col-md-12">
-                <figure class="text-center img-responsive">
-                  <img src="img/LogoEC.png" title="Estamos Capacitados" alt="Imagen Estamos Capacitados">
-                </figure>
-              </div>
-
-              <!--BARRA DE BUSQUEDA CENTRAL-->
-              <div class="col-sm-6 col-md-12">
-                <div class="welcome_search hidden-xs"> 
-                  <form class="form_search">
-                    <input type="text" title="Buscar" placeholder="Busca: Diseños, Traducciones, Programación" maxlength="40" autocomplete="off" >
-                    <button type="button" title="buscar" class="btn btn-warning" href="resultadoBusqueda.html">Buscar</button>
-                  </form>
-                </div>
-              </div>
-              
-              <!--SUBTITULO BIENVENIDA-->
-              <div class="col-sm-6 col-md-12">
-                <h3 class="text-center">
-                  Trabajos con ❤ realizados por PeSD
-                </h3>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--SERVICIOS-->
-        <section class="services">  
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-3">
-                <div class="service_item">
-                  <div class="icon_box">
-                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                  </div>
-                  <div class="service_text">
-                    <p>Más de 800 trabajos por semana</p>
-                    <a class="btn btn-link" href="#">Ver Más</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3">
-                <div class="service_item">
-                  <div class="icon_box">
-                    <i class="fa fa-wheelchair" aria-hidden="true"></i>
-                  </div>
-                  <div class="service_text">
-                    <p>Más de 1000 Personas en situación de discapacidad trabajan a traves de Estamos Capacitados</p>
-                    <a class="btn btn-link" href="#">Ver Más</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3">
-                <div class="service_item">
-                  <div class="icon_box">
-                    <i class="fa fa-building-o" aria-hidden="true"></i>
-                  </div>
-                  <div class="service_text">
-                    <p>Más de 20 instituciones asociadas a Estamos Capacitados</p>
-                    <a class="btn btn-link" href="#">Ver Más</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3">
-                 <div class="service_item">
-                  <div class="icon_box">
-                    <i class="fa fa-laptop" aria-hidden="true"></i>
-                  </div>
-                  <div class="service_text">
-                    <p>Más de 100 Tipos de trabajos ofrecidos</p>
-                    <a class="btn btn-link" href="#">Ver Más</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--CASOS DE EXITO-->
-        <section class="case_success">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-6">
-                <div class="success_box">
-                  <div class="">
-                    <h3>Casos de Éxito</h3>
-                  </div>
-                  <div class="card">
-                    <div>
-                      <h4>Trabajador de la semana</h4>
+                    <!--Fotos Servicio-->
+                    <div class="form-group col-md-6">
+                      <label class="control-label">Sube fotos del servicio</label>
+                      <input id="input-fa" name="inputfa[]" type="file" multiple class="file-loading">
                     </div>
-                    <section class="card-image text-center employee_img">
-                      <img class="img-responsive img-thumbnail" src="https://goo.gl/U1eJTT" alt="Foto empleado del mes">
-                      <label class="card-title">Ignacio Céspedes C.</label>
-                    </section>
-                    <section class="success_employee_multimedia">
-                      <div class="success_employee_video">
-                        
-                      </div>
-                      <div class="success_employee_photos">
-                        
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div class="success_box">
-                  <div class="success_title">
-                    <h3>Otros Casos de Éxito</h3>
-                  </div>
-                  <div class="success_other_employee">
-                    
-                  </div>
-                </div>
+                  </section>
+                </form>
               </div>
             </div>
           </div>
@@ -334,12 +233,14 @@
           </div>
         </section>
       </footer>
-      
+
       <!--SCRIPTS-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
       <script src="js/star-rating.min.js"></script>
+      <script src="js/fileinput.js"></script>
       <script src="js/theme.min.js"></script>
+      <script src="js/es.js"></script>
       <script src="js/index.js"></script>
       <script src="js/validator.min.js"></script>
     </body>
