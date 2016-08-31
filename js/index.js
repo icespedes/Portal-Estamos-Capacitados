@@ -15,7 +15,7 @@ $('.kv-ltr-theme-svg-star').rating({
 });
 
 //CONTADOR DE CARACTERES DESCRIPCION SERVICIO
-var text_max = 300;
+var text_max = 80;
 $('#count_message').html(text_max + ' Caracteres');
 
 $('#service_description').keyup(function() {
